@@ -25,7 +25,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Air_Canada_Boeing_787_C-GHPT.jpg",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "arrival-in-delhi",
@@ -39,7 +40,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indira_Gandhi_International_Airport,_New_Delhi.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Cropped, resized and converted to WebP"
+    "modified": "Cropped, resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "early-arrival-in-delhi",
@@ -125,7 +127,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qadian_rooftop_and_Minaratul_Masih.JPG",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "arrival-in-qadian-and-visit-to-bahishti-maqbara",
@@ -139,7 +142,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okhla_Muslim_Cemetery_07.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "exploring-qadian-fajr-and-darul-masih",
@@ -153,7 +157,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Aqsa_Large.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "a-day-immersed-in-prayer-and-reflection",
@@ -167,7 +172,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Quran_stands.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "a-voice-from-the-minaret",
@@ -204,7 +210,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noor_Hospital_Qadian.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "a-friday-to-remember",
@@ -218,7 +225,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Aqsa_Qadian.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "a-farewell-full-of-gratitude",
@@ -241,7 +249,8 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roads_in_Punjab_India.jpg",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "the-buffalo-miracle",
@@ -255,12 +264,13 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Airport_Delhi.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
+    "modified": "Resized and converted to WebP",
+    "adaptationLicense": "same"
   },
   {
     "sessionSlug": "a-sad-news-the-last-dervish-of-qadian",
     "src": "assets/photos/reference/qadian-minaret-flag.webp",
-    "caption": "Minarat-ul-Masih and Liwa-e-Ahmadiyya in Qadian—an image of the legacy safeguarded by the Dervishes.",
+    "caption": "Reference image: Minarat-ul-Masih and Liwa-e-Ahmadiyya in Qadian—an image of the legacy safeguarded by the Dervishes.",
     "alt": "Liwa-e-Ahmadiyya flag flying beside the White Minaret and Masjid Aqsa in Qadian.",
     "orientation": "landscape",
     "width": 1600,

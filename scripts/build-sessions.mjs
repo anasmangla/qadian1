@@ -83,7 +83,8 @@ entries.forEach((entry, index) => {
       sourceUrl: photo.sourceUrl || "",
       license: photo.license || "",
       licenseUrl: photo.licenseUrl || "",
-      modified: photo.modified === true ? "Resized" : (photo.modified || "")
+      modified: photo.modified === true ? "Resized" : (photo.modified || ""),
+      adaptationLicense: photo.adaptationLicense || ""
     }));
 });
 
@@ -105,6 +106,23 @@ for (const [index, photo] of photoManifest.entries()) {
   }
   if (![photo.src, photo.alt, photo.caption].every(cleanWhitespace)) {
     throw new Error(`Photo ${index + 1} needs a source path, alt text, and caption.`);
+  }
+  const isShareAlike = /^CC BY-SA(?:\s|$)/i.test(cleanWhitespace(photo.license));
+  const isModifiedReference = photo.src.startsWith("assets/photos/reference/") && cleanWhitespace(photo.modified);
+  if (isShareAlike && isModifiedReference && photo.adaptationLicense !== "same") {
+    throw new Error(`Photo ${index + 1} must release its adapted version under the same CC BY-SA license.`);
+  }
+  if (photo.adaptationLicense && (photo.adaptationLicense !== "same" || !isShareAlike || !isModifiedReference)) {
+    throw new Error(`Photo ${index + 1} has invalid adaptation-license metadata.`);
+  }
+  if (isShareAlike && isModifiedReference) {
+    const attributionValues = [photo.credit || photo.attribution, photo.sourceUrl, photo.licenseUrl];
+    if (!attributionValues.every(cleanWhitespace)) {
+      throw new Error(`Photo ${index + 1} needs creator, source, and license attribution.`);
+    }
+    if (![photo.sourceUrl, photo.licenseUrl].every((url) => /^https?:\/\//i.test(url))) {
+      throw new Error(`Photo ${index + 1} needs valid source and license links.`);
+    }
   }
   const photoPath = path.resolve(projectDir, photo.src);
   if (!photoPath.startsWith(`${projectDir}${path.sep}`) || !fs.existsSync(photoPath)) {
@@ -161,7 +179,12 @@ function renderPhoto(photo, options = {}) {
   const licenseLabel = licenseUrl
     ? `<a href="${escapeHtml(licenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(license || "License")}</a>`
     : escapeHtml(license);
-  const attribution = [creditLabel, sourceLabel, licenseLabel, escapeHtml(modified)].filter(Boolean).join(" · ");
+  const adaptationLabel = modified && photo.adaptationLicense === "same"
+    ? `Adapted version: ${escapeHtml(modified)}; released under the same ${licenseLabel}`
+    : "";
+  const attribution = photo.adaptationLicense === "same"
+    ? [creditLabel, sourceLabel, adaptationLabel].filter(Boolean).join(" · ")
+    : [creditLabel, sourceLabel, licenseLabel, escapeHtml(modified)].filter(Boolean).join(" · ");
   const caption = `
           <span class="photo-caption">${escapeHtml(photo.caption)}</span>
           ${attribution ? `<span class="photo-credit">${attribution}</span>` : ""}`;

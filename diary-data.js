@@ -58,7 +58,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Pearson_Airport-Terminal_1.JPG",
         "license": "CC BY 2.5",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -82,11 +83,11 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "While still in our vehicles, I received a call from Mirza Harris Sahib, National Secretary Waqf-e-Nau, who shared troubling news from Hannan Khan Sahib, our travel agent: our flight had been canceled. My heart sank, but there was no time to dwell. We left everyone in the car with their luggage and rushed to the Air France counter."
+        "text": "While still in our vehicles, I received a call from Mirza Haris Ahmad Sahib, National Secretary Waqf-e-Nau, who shared troubling news from Hanan Khan Sahib, our travel agent: our flight had been canceled. My heart sank, but there was no time to dwell. We left everyone in the car with their luggage and rushed to the Air France counter."
       },
       {
         "type": "paragraph",
-        "text": "When we arrived, the staff were surprised that we already knew about the cancellation; the flight status had yet to be updated on their monitors. Chaos loomed as Hannan Sahib coordinated with Customer Service and I raced from one terminal desk to another, trying to find a solution. We were repeatedly told there would be no flights available for the next two days."
+        "text": "When we arrived, the staff were surprised that we already knew about the cancellation; the flight status had yet to be updated on their monitors. Chaos loomed as Hanan Sahib coordinated with Customer Service and I raced from one terminal desk to another, trying to find a solution. We were repeatedly told there would be no flights available for the next two days."
       },
       {
         "type": "paragraph",
@@ -98,7 +99,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "As soon as we received our boarding passes, I received another call from Mirza Harris Sahib. He simply said, “Alhamdulillah.” Unbeknownst to me, as soon as he learned of the flight cancellation, he had reached out to Huzur’s Private Secretary and requested prayers. In that moment, I knew—this was not mere coincidence. It was the result of the prayers of our parents, friends, and especially the special prayers of our beloved Huzur (aba)."
+        "text": "As soon as we received our boarding passes, I received another call from Mirza Haris Ahmad Sahib. He simply said, “Alhamdulillah.” Unbeknownst to me, as soon as he learned of the flight cancellation, he had reached out to Huzur’s Private Secretary and requested prayers. In that moment, I knew—this was not mere coincidence. It was the result of the prayers of our parents, friends, and especially the special prayers of our beloved Huzur (aba)."
       },
       {
         "type": "paragraph",
@@ -133,7 +134,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Air_Canada_Boeing_787_C-GHPT.jpg",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -196,7 +198,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indira_Gandhi_International_Airport,_New_Delhi.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Cropped, resized and converted to WebP"
+        "modified": "Cropped, resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -236,7 +239,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "As we stepped inside, we were greeted warmly by Mirza Harris Sahib, National Secretary Waqf-e-Nau, and his brother Mirza Nabeel Sahib, the trip coordinator. For some of us, it was the first time meeting them in person, but after months of Zoom meetings, phone calls, text messages, and emails, it felt as though we already knew them well. They greeted everyone by name, a simple gesture that reflected the care and dedication they had put into this journey."
+        "text": "As we stepped inside, we were greeted warmly by Mirza Haris Ahmad Sahib, National Secretary Waqf-e-Nau, and his brother Mirza Nabeel Sahib, the trip coordinator. For some of us, it was the first time meeting them in person, but after months of Zoom meetings, phone calls, text messages, and emails, it felt as though we already knew them well. They greeted everyone by name, a simple gesture that reflected the care and dedication they had put into this journey."
       },
       {
         "type": "paragraph",
@@ -259,7 +262,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -300,7 +304,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "I also admired how Mirza Harris Sahib, Mirza Nabeel Sahib, and their core Waqf-e-Nau team adapted to these constant changes with grace and optimism. Their leadership ensured that even when plans didn’t unfold as expected, the group remained focused and hopeful. After all, Delhi is just a gathering site for us—the heart of this journey lies in Qadian."
+        "text": "I also admired how Mirza Haris Ahmad Sahib, Mirza Nabeel Sahib, and their core Waqf-e-Nau team adapted to these constant changes with grace and optimism. Their leadership ensured that even when plans didn’t unfold as expected, the group remained focused and hopeful. After all, Delhi is just a gathering site for us—the heart of this journey lies in Qadian."
       },
       {
         "type": "paragraph",
@@ -331,7 +335,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -451,7 +456,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       },
       {
         "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/red-fort.webp",
@@ -465,7 +471,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -539,7 +546,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "Its design is a perfect balance of symmetry, except for Shah Jahan’s own grave, which lies beside Mumtaz’s tomb inside the mausoleum. Interestingly, Shah Jahan originally planned to build a matching Taj Mahal in black marble on the opposite side of the Yamuna River. However, his son Aurangzeb didn’t approve of this plan and buried him next to Mumtaz instead."
+        "text": "Its design is a perfect balance of symmetry, except for Shah Jahan’s own grave, which lies beside Mumtaz’s tomb inside the mausoleum. A popular legend claims that Shah Jahan planned a matching mausoleum in black marble across the Yamuna River. However, established archaeological evidence does not support that story; it remains part of the Taj Mahal’s folklore rather than a confirmed historical plan."
       },
       {
         "type": "paragraph",
@@ -630,7 +637,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       },
       {
         "src": "assets/photos/a-day-at-the-taj-mahal/taj-marble-detail.webp",
@@ -644,7 +652,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -797,7 +806,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -898,7 +908,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -932,7 +943,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "The trip is led by two brothers, Haris Mirza Sahib and Nabeel Mirza Sahib. Haris, the National Secretary of Waqf-e-Nau, serves as the executive leader, while Nabeel, the trip organizer, manages every detail of the journey. Both are incredibly professional, humble, and kind, handling every situation with down-to-earth courtesy. Every aspect of the trip is planned under the direct guidance of Huzur (aba), Markaz, and the local hosts. Their identical appearances have led to more than a few lighthearted moments, as people have mistaken one brother for the other."
+        "text": "The trip is led by two brothers, Mirza Haris Ahmad Sahib and Mirza Nabeel Sahib. Haris, the National Secretary of Waqf-e-Nau, serves as the executive leader, while Nabeel, the trip organizer, manages every detail of the journey. Both are incredibly professional, humble, and kind, handling every situation with down-to-earth courtesy. Every aspect of the trip is planned under the direct guidance of Huzur (aba), Markaz, and the local hosts. Their identical appearances have led to more than a few lighthearted moments, as people have mistaken one brother for the other."
       },
       {
         "type": "paragraph",
@@ -1035,7 +1046,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qadian_rooftop_and_Minaratul_Masih.JPG",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -1148,7 +1160,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okhla_Muslim_Cemetery_07.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -1178,7 +1191,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "The morning commenced with Mirza Harris delivering a heartfelt address on the significance of our journey and the spiritual essence of Qadian. He reminded us of the prophecy revealed to Hazrat Mirza Ghulam Ahmad (as): “Kings shall seek blessings from thy garments.” This profound revelation underscored the honor and reverence destined for the Promised Messiah (as), even from the highest echelons of society."
+        "text": "The morning commenced with Mirza Haris Ahmad delivering a heartfelt address on the significance of our journey and the spiritual essence of Qadian. He reminded us of the prophecy revealed to Hazrat Mirza Ghulam Ahmad (as): “Kings shall seek blessings from thy garments.” This profound revelation underscored the honor and reverence destined for the Promised Messiah (as), even from the highest echelons of society."
       },
       {
         "type": "paragraph",
@@ -1294,7 +1307,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Aqsa_Large.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -1399,7 +1413,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Quran_stands.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -1494,7 +1509,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "As I was eating, my co-chaperone, Mohammad Ali Sahib, approached me with news. “Mirza Nabeel Sahib and Harris Sahib were looking for you last night after you went to sleep,” he said. He then shared something incredible: I had been selected to call the Adhan for Jumma prayers as well."
+        "text": "As I was eating, my co-chaperone, Mohammad Ali Sahib, approached me with news. “Mirza Nabeel Sahib and Haris Sahib were looking for you last night after you went to sleep,” he said. He then shared something incredible: I had been selected to call the Adhan for Jumma prayers as well."
       },
       {
         "type": "paragraph",
@@ -1533,7 +1548,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wei%C3%9Fes_Minarett,_Qadian_(Minarat_ul-Massih).jpg",
         "license": "Public domain",
         "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -1641,7 +1657,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -1774,7 +1791,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noor_Hospital_Qadian.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -1911,7 +1929,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Aqsa_Qadian.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -2050,7 +2069,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -2076,7 +2096,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "The admins, Harris and Nabeel bhai, were busy getting everyone ready, but even they seemed weighed down by the sadness of departure."
+        "text": "The admins, Haris and Nabeel bhai, were busy getting everyone ready, but even they seemed weighed down by the sadness of departure."
       },
       {
         "type": "paragraph",
@@ -2195,7 +2215,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roads_in_Punjab_India.jpg",
         "license": "CC BY-SA 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -2228,7 +2249,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "Sensing the gravity of the situation, I encouraged the children in our group to immediately write to Huzur. I submitted a letter through the Waqf-e-Nau website and contacted Mirza Harris Sahib, Secretary Waqf-e-Nau USA. Harris Sahib assured me he would also write to Huzur on our behalf, and I prayed that Allah would pave the way for us."
+        "text": "Sensing the gravity of the situation, I encouraged the children in our group to immediately write to Huzur. I submitted a letter through the Waqf-e-Nau website and contacted Mirza Haris Ahmad Sahib, Secretary Waqf-e-Nau USA. Haris Sahib assured me he would also write to Huzur on our behalf, and I prayed that Allah would pave the way for us."
       },
       {
         "type": "paragraph",
@@ -2236,7 +2257,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "Throughout the ordeal, I remained in contact with Harris Sahib, Mirza Nabeel Sahib (our trip coordinator), and Hanan Khan Sahib (our travel agent). But despite their efforts, progress felt stagnant. At one point, doubt crept into my mind: How could writing to Huzur possibly change this dire situation?"
+        "text": "Throughout the ordeal, I remained in contact with Haris Sahib, Mirza Nabeel Sahib (our trip coordinator), and Hanan Khan Sahib (our travel agent). But despite their efforts, progress felt stagnant. At one point, doubt crept into my mind: How could writing to Huzur possibly change this dire situation?"
       },
       {
         "type": "heading",
@@ -2264,7 +2285,7 @@ window.QADIAN_DIARY_ENTRIES = [
       },
       {
         "type": "paragraph",
-        "text": "Later, when I shared this story with Harris Sahib, he jokingly remarked that Huzur must have prayed so much for the Buffalo Group that week, given the series of letters he’d received about us. I could only respond with a heartfelt, “Alhamdulillah.”"
+        "text": "Later, when I shared this story with Haris Sahib, he jokingly remarked that Huzur must have prayed so much for the Buffalo Group that week, given the series of letters he’d received about us. I could only respond with a heartfelt, “Alhamdulillah.”"
       },
       {
         "type": "paragraph",
@@ -2295,7 +2316,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Airport_Delhi.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": "same"
       }
     ]
   },
@@ -2386,7 +2408,7 @@ window.QADIAN_DIARY_ENTRIES = [
       {
         "src": "assets/photos/reference/qadian-minaret-flag.webp",
         "alt": "Liwa-e-Ahmadiyya flag flying beside the White Minaret and Masjid Aqsa in Qadian.",
-        "caption": "Minarat-ul-Masih and Liwa-e-Ahmadiyya in Qadian—an image of the legacy safeguarded by the Dervishes.",
+        "caption": "Reference image: Minarat-ul-Masih and Liwa-e-Ahmadiyya in Qadian—an image of the legacy safeguarded by the Dervishes.",
         "orientation": "landscape",
         "width": 1600,
         "height": 864,
@@ -2395,7 +2417,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liwa-e-Ahmadiyya_and_Minarat-ul-Massih.jpg",
         "license": "Public domain",
         "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
-        "modified": "Resized and converted to WebP"
+        "modified": "Resized and converted to WebP",
+        "adaptationLicense": ""
       }
     ]
   },
@@ -2454,7 +2477,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       },
       {
         "src": "assets/photos/a-day-at-the-taj-mahal/taj-marble-detail.webp",
@@ -2468,7 +2492,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       },
       {
         "src": "assets/photos/a-farewell-full-of-gratitude/minarat-ul-masih-at-night.webp",
@@ -2482,7 +2507,8 @@ window.QADIAN_DIARY_ENTRIES = [
         "sourceUrl": "",
         "license": "",
         "licenseUrl": "",
-        "modified": ""
+        "modified": "",
+        "adaptationLicense": ""
       }
     ]
   }
