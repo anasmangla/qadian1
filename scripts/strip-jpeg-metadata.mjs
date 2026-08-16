@@ -47,15 +47,24 @@ function stripPrivateMetadata(input) {
   throw new Error("JPEG is missing a start-of-scan marker.");
 }
 
-const files = fs.readdirSync(photoDir).filter((file) => file.endsWith(".jpg")).sort();
+function jpegFiles(directory) {
+  return fs.readdirSync(directory, { withFileTypes: true })
+    .flatMap((entry) => {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) return jpegFiles(entryPath);
+      return entry.isFile() && entry.name.toLowerCase().endsWith(".jpg") ? [entryPath] : [];
+    })
+    .sort();
+}
+
+const files = jpegFiles(photoDir);
 if (!files.length) throw new Error("No personal JPEG files found.");
 
-for (const file of files) {
-  const filePath = path.join(photoDir, file);
+for (const filePath of files) {
   const stripped = stripPrivateMetadata(fs.readFileSync(filePath));
   const tempPath = `${filePath}.metadata-stripped`;
   fs.writeFileSync(tempPath, stripped);
   fs.renameSync(tempPath, filePath);
 }
 
-console.log(`Stripped private metadata from ${files.length} personal JPEG files.`);
+console.log(`Stripped private metadata from ${files.length} personal JPEG files, including responsive subdirectories.`);

@@ -31,6 +31,7 @@ const indexHtml = read("index.html");
 const notFoundHtml = read("404.html");
 const slugs = entries.map((entry) => entry.slug);
 const slugSet = new Set(slugs);
+const usedPrimaryAssets = new Set();
 
 check(entries.length === 22, `Expected 22 diary entries, received ${entries.length}.`);
 check(slugSet.size === 22, "Diary chapter slugs must be unique.");
@@ -40,13 +41,27 @@ for (const [index, photo] of manifest.entries()) {
   const label = `Photo ${index + 1}`;
   check(slugSet.has(photo.sessionSlug), `${label} uses an unknown sessionSlug: ${photo.sessionSlug}`);
   check([photo.src, photo.alt, photo.caption].every(clean), `${label} needs src, alt, and caption metadata.`);
+  check(["photo", "illustration"].includes(photo.kind), `${label} needs kind photo or illustration.`);
   check(["landscape", "portrait"].includes(photo.orientation), `${label} needs a valid orientation.`);
   check(Number(photo.width) > 0 && Number(photo.height) > 0, `${label} needs positive width and height metadata.`);
-  check(!clean(photo.src).startsWith("assets/photos/reference/"), `${label} must use a personal diary photo, not a reference image.`);
+  check(!clean(photo.src).startsWith("assets/photos/reference/"), `${label} must not use a reference or stock image.`);
+  check(!usedPrimaryAssets.has(clean(photo.src)), `${label} duplicates an image already assigned to another chapter.`);
+  usedPrimaryAssets.add(clean(photo.src));
 
   const assetPath = path.resolve(projectDir, clean(photo.src));
   check(assetPath.startsWith(`${projectDir}${path.sep}`), `${label} points outside the project.`);
   check(fs.existsSync(assetPath), `${label} asset is missing: ${photo.src}`);
+
+  if (photo.kind === "photo") {
+    check(clean(photo.src).startsWith("assets/photos/personal/curated/"), `${label} personal photo must use the curated personal-photo directory.`);
+    check((photo.variants || []).length === 2, `${label} personal photo needs 480px and 960px responsive variants.`);
+  } else {
+    check(clean(photo.src).startsWith("assets/illustrations/source/") && clean(photo.src).endsWith(".svg"), `${label} illustration must use an original local SVG.`);
+    check((photo.variants || []).length === 0, `${label} SVG illustration should scale responsively without raster variants.`);
+    if (fs.existsSync(assetPath)) {
+      check(fs.readFileSync(assetPath, "utf8").includes("<svg"), `${label} illustration is not valid SVG source.`);
+    }
+  }
 
   const externalAttribution = [
     photo.credit,
@@ -70,11 +85,22 @@ for (const [index, photo] of manifest.entries()) {
     check(variantPath.startsWith(`${projectDir}${path.sep}`), `${label}, variant ${variantIndex + 1} points outside the project.`);
     check(fs.existsSync(variantPath), `${label}, variant ${variantIndex + 1} asset is missing: ${variant.src}`);
   }
+  if (photo.kind === "photo") {
+    check(variantWidths.has(480) && variantWidths.has(960), `${label} is missing its 480px or 960px responsive candidate.`);
+  }
 }
 
 const personalJpegs = new Set(
-  manifest.flatMap((photo) => [photo.src, ...(photo.variants || []).map((variant) => variant.src)])
+  manifest
+    .filter((photo) => photo.kind === "photo")
+    .flatMap((photo) => [photo.src, ...(photo.variants || []).map((variant) => variant.src)])
 );
+
+check(manifest[0]?.src.endsWith("chapter-01-toronto-airport.svg"), "Chapter 1 must use the Toronto Pearson airport-sign illustration.");
+check(manifest[1]?.src.endsWith("chapter-02-flight-out.svg"), "Chapter 2 must use the right-facing airplane illustration.");
+const chapterSix = manifest.filter((photo) => photo.sessionSlug === "a-day-of-plans-changes-and-timeless-wonders");
+check(chapterSix[0]?.src.includes("red-fort-flag") && chapterSix[1]?.src.includes("qutub-minar-detail"), "Chapter 6 photo order must be Red Fort first and Qutub Minar second.");
+check(manifest.find((photo) => photo.sessionSlug === "a-day-at-the-taj-mahal")?.src.includes("taj-mahal-reflection"), "Chapter 7 must lead with the personal full-view Taj Mahal photo.");
 
 for (const relativePath of personalJpegs) {
   const image = fs.readFileSync(path.join(projectDir, relativePath));
@@ -97,10 +123,14 @@ check(/<section\b[^>]*\bid="chapters"[^>]*\btabindex="-1"/.test(indexHtml), "The
 check(!indexHtml.includes("diary-data.js"), "The home page should not load the full diary dataset.");
 check(indexHtml.includes('name="twitter:card" content="summary_large_image"'), "The home page is missing Twitter card metadata.");
 check(indexHtml.includes('property="og:image:alt"'), "The home page is missing Open Graph image alt text.");
-check(indexHtml.includes('href="styles.css?v=6"'), "The home page stylesheet version is stale.");
+check(indexHtml.includes('class="site-emblem" src="assets/ahmadiyya-logo.png"'), "The home page is missing the Ahmadiyya emblem.");
+check(indexHtml.includes('rel="icon" type="image/png" href="assets/ahmadiyya-logo.png"'), "The home page is missing the Ahmadiyya favicon.");
+check(indexHtml.includes('href="styles.css?v=7"'), "The home page stylesheet version is stale.");
+check(indexHtml.includes("qadian-route-cover-v2.webp"), "The home page must use the corrected eastbound cover image.");
+check(indexHtml.includes("right-facing airplane flying from Toronto"), "The cover alt text must identify the west-to-east plane direction.");
 check(notFoundHtml.includes('name="robots" content="noindex"'), "404.html must be excluded from search indexing.");
 check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/"'), "404.html needs a link back to the diary.");
-check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/styles.css?v=6"'), "404.html stylesheet version is stale.");
+check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/styles.css?v=7"'), "404.html stylesheet version is stale.");
 
 slugs.forEach((slug, index) => {
   const fileName = `${slug}.html`;
@@ -118,12 +148,14 @@ slugs.forEach((slug, index) => {
   check(html.includes("Source+Serif+4"), `Source Serif 4 is missing: ${slug}`);
   check(html.includes("../reader.js?v=1"), `Reading-position script is missing: ${slug}`);
   check(/<main\b[^>]*\bid="chapter-content"[^>]*\btabindex="-1"/.test(html), `Chapter skip-link target is not focusable: ${slug}`);
-  check(/<img [^>]*sizes="\(max-width: 800px\)/.test(html), `Responsive image sizing is missing: ${slug}`);
+  check(/<img [^>]*sizes="\(max-width: 520px\)[^"]*\(max-width: 800px\)/.test(html), `Responsive image sizing is missing: ${slug}`);
+  check(html.includes('class="site-emblem" src="../assets/ahmadiyya-logo.png"'), `The Ahmadiyya emblem is missing: ${slug}`);
+  check(html.includes('rel="icon" type="image/png" href="../assets/ahmadiyya-logo.png"'), `The Ahmadiyya favicon is missing: ${slug}`);
   check(html.includes('name="twitter:card" content="summary_large_image"'), `Twitter card metadata is missing: ${slug}`);
   check(html.includes('property="og:image:alt"'), `Open Graph image alt text is missing: ${slug}`);
   check(html.includes('property="og:image:width"') && html.includes('property="og:image:height"'), `Open Graph image dimensions are missing: ${slug}`);
   check(html.includes('"@type": "Article"'), `Article structured data is missing: ${slug}`);
-  check(html.includes('href="../styles.css?v=6"'), `Chapter stylesheet version is stale: ${slug}`);
+  check(html.includes('href="../styles.css?v=7"'), `Chapter stylesheet version is stale: ${slug}`);
   if (index < slugs.length - 1) {
     check(/<time datetime="2024-\d{2}-\d{2}">/.test(html), `Machine-readable chapter date is missing: ${slug}`);
     check(html.includes('property="article:published_time"'), `Published-time metadata is missing: ${slug}`);

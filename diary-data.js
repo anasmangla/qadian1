@@ -48,18 +48,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Only a few hours remain before our flight departs from Toronto. Earlier today, someone shared pictures on WhatsApp from the airport, moments before…",
     "photos": [
       {
-        "src": "assets/photos/personal/minarat-night.jpg",
-        "alt": "Minarat-ul-Masih illuminated against the night sky in Qadian.",
-        "caption": "Minarat-ul-Masih, photographed later in Qadian—the destination held in mind before departure.",
+        "src": "assets/illustrations/source/chapter-01-toronto-airport.svg",
+        "alt": "A blue airport departure sign reading Toronto Pearson International Airport and YYZ, with a right-pointing departure arrow.",
+        "caption": "Original diary illustration: Toronto Pearson International Airport, where the journey was scheduled to begin.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/minarat-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -124,18 +120,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Our journey began with a two-hour drive across the border from Buffalo, NY, to Toronto to board our Air France flight to India. The excitement was…",
     "photos": [
       {
-        "src": "assets/photos/personal/delegation-coach-road.jpg",
-        "alt": "A delegation coach traveling along a divided highway in India.",
-        "caption": "One of the delegation’s coaches later on the road north.",
+        "src": "assets/illustrations/source/chapter-02-flight-out.svg",
+        "alt": "A right-facing airplane traveling along a dotted route from Toronto on the left to Delhi on the right.",
+        "caption": "Original diary illustration: the west-to-east flight from Toronto toward Delhi.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/delegation-coach-road-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -188,15 +180,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "We are finally in Delhi! Following the recommendations from the Waqf-e-Nau admin team, we made sure all group members were armed with masks as we…",
     "photos": [
       {
-        "src": "assets/photos/personal/delhi-street.jpg",
-        "alt": "Auto-rickshaws and cars moving through a busy Delhi street.",
-        "caption": "Delhi traffic on the group’s first full day in the city.",
+        "src": "assets/photos/personal/curated/masjid-baitul-hadi-exterior-1600.jpg",
+        "alt": "The white minaret and arched facade of Masjid Baitul Hadi beneath a clear blue sky.",
+        "caption": "Masjid Baitul Hadi at the end of the group’s November 22 arrival in Delhi.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/delhi-street-960.jpg",
+            "src": "assets/photos/personal/curated/masjid-baitul-hadi-exterior-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/masjid-baitul-hadi-exterior-960.jpg",
             "width": 960
           }
         ]
@@ -252,15 +249,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "We arrived in Delhi at 3 a.m., stepping into the calm stillness of the early morning. The journey had been long, but the excitement of finally being in…",
     "photos": [
       {
-        "src": "assets/photos/personal/masjid-baitul-hadi.jpg",
-        "alt": "The white minaret and arched facade of Masjid Baitul Hadi beneath a clear blue sky.",
-        "caption": "Masjid Baitul Hadi, Delhi.",
+        "src": "assets/photos/personal/curated/baitul-hadi-interior-1600.jpg",
+        "alt": "The delegation’s bedding and luggage arranged inside the prayer hall at Masjid Baitul Hadi.",
+        "caption": "Inside Masjid Baitul Hadi during the delegation’s first full day in Delhi.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/masjid-baitul-hadi-960.jpg",
+            "src": "assets/photos/personal/curated/baitul-hadi-interior-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/baitul-hadi-interior-960.jpg",
             "width": 960
           }
         ]
@@ -325,15 +327,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "After a long journey, we started our day with an excursion to Humayun’s Tomb, splitting into two buses. Though we didn’t have a guide and were unsure of…",
     "photos": [
       {
-        "src": "assets/photos/personal/humayuns-tomb.jpg",
-        "alt": "Humayun’s Tomb framed by a pointed gateway with visitors silhouetted in the passage.",
-        "caption": "Humayun’s Tomb, framed through its gateway.",
+        "src": "assets/photos/personal/curated/humayuns-tomb-gateway-1600.jpg",
+        "alt": "Humayun’s Tomb framed by a pointed gateway with distant visitors silhouetted in the passage.",
+        "caption": "Humayun’s Tomb, framed through its gateway on November 23.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/humayuns-tomb-960.jpg",
+            "src": "assets/photos/personal/curated/humayuns-tomb-gateway-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/humayuns-tomb-gateway-960.jpg",
             "width": 960
           }
         ]
@@ -446,29 +453,39 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Today was a long but exciting day, filled with changes, adjustments, and unexpected detours. Let’s start with the places we were supposed to visit but…",
     "photos": [
       {
-        "src": "assets/photos/personal/qutub-minar.jpg",
-        "alt": "A close upward view of Qutub Minar’s carved stonework against a blue sky.",
-        "caption": "Qutub Minar, the day’s first stop.",
-        "orientation": "portrait",
-        "width": 1067,
-        "height": 1601,
-        "variants": [
-          {
-            "src": "assets/photos/personal/qutub-minar-640.jpg",
-            "width": 640
-          }
-        ]
-      },
-      {
-        "src": "assets/photos/personal/red-fort.jpg",
+        "src": "assets/photos/personal/curated/red-fort-flag-1600.jpg",
         "alt": "The Indian flag flying over the Red Fort’s red sandstone pavilions with birds overhead.",
         "caption": "The Indian flag above the Red Fort, where the group ended the day.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/red-fort-960.jpg",
+            "src": "assets/photos/personal/curated/red-fort-flag-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/red-fort-flag-960.jpg",
+            "width": 960
+          }
+        ]
+      },
+      {
+        "src": "assets/photos/personal/curated/qutub-minar-detail-1600.jpg",
+        "alt": "A close upward view of Qutub Minar’s carved stonework against a blue sky.",
+        "caption": "Qutub Minar, the day’s first landmark stop.",
+        "kind": "photo",
+        "orientation": "portrait",
+        "width": 1600,
+        "height": 2400,
+        "variants": [
+          {
+            "src": "assets/photos/personal/curated/qutub-minar-detail-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/qutub-minar-detail-960.jpg",
             "width": 960
           }
         ]
@@ -626,15 +643,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "But that’s not all. There’s so much more to it, and this is why you’re reading this. So, relax, grab a cup of tea, and join me on this incredible day trip.",
     "photos": [
       {
-        "src": "assets/photos/personal/taj-mahal.jpg",
-        "alt": "The Taj Mahal reflected in its long central pool beneath a pale blue sky.",
-        "caption": "The Taj Mahal across the central reflecting pool.",
+        "src": "assets/photos/personal/curated/taj-mahal-reflection-1600.jpg",
+        "alt": "A centered view of the Taj Mahal and its minarets beyond the long reflecting pool.",
+        "caption": "The Taj Mahal across the central reflecting pool on November 25.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/taj-mahal-960.jpg",
+            "src": "assets/photos/personal/curated/taj-mahal-reflection-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/taj-mahal-reflection-960.jpg",
             "width": 960
           }
         ]
@@ -780,15 +802,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Today is both a sad and an exciting day. Sad, because we are leaving Delhi and saying goodbye to the gracious and incredible hosts at Masjid Baitul Hadi.…",
     "photos": [
       {
-        "src": "assets/photos/personal/ludhiana-road.jpg",
-        "alt": "A highway sign seen through the coach windshield showing Ludhiana 73 kilometres ahead.",
-        "caption": "Ludhiana, 73 kilometres ahead.",
+        "src": "assets/photos/personal/curated/ludhiana-road-sign-1600.jpg",
+        "alt": "A highway direction sign showing Jalandhar and Ludhiana, with part of the delegation coach visible.",
+        "caption": "A road sign marking Ludhiana 73 kilometres ahead on November 26.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/ludhiana-road-960.jpg",
+            "src": "assets/photos/personal/curated/ludhiana-road-sign-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/ludhiana-road-sign-960.jpg",
             "width": 960
           }
         ]
@@ -882,15 +909,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "After completing our visit to Ludhiana, we gathered for Zuhr and Asr prayers in congregation and then shared a moment of combined silent supplication,…",
     "photos": [
       {
-        "src": "assets/photos/personal/hoshiarpur-sign.jpg",
+        "src": "assets/photos/personal/curated/hoshiarpur-road-sign-1600.jpg",
         "alt": "A green road sign at night showing Hoshiarpur five kilometres ahead.",
-        "caption": "Hoshiarpur, five kilometres ahead.",
+        "caption": "Hoshiarpur, five kilometres ahead during the nighttime journey toward Qadian.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/hoshiarpur-sign-960.jpg",
+            "src": "assets/photos/personal/curated/hoshiarpur-road-sign-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/hoshiarpur-road-sign-960.jpg",
             "width": 960
           }
         ]
@@ -1020,15 +1052,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "As I look around, many are struggling to keep their eyes open, worn out from the day’s long journey. Yet, the admins remain upright, engaged in quiet…",
     "photos": [
       {
-        "src": "assets/photos/personal/qadian-coach-night.jpg",
-        "alt": "The delegation’s TS Travels coach stopped on a street at night.",
-        "caption": "The delegation’s coach during the nighttime Qadian leg of the journey.",
+        "src": "assets/photos/personal/curated/qadian-coach-arrival-1600.jpg",
+        "alt": "The delegation’s TS Travels coach stopped on a Qadian street late at night.",
+        "caption": "The delegation’s coach stopped during the late-night arrival in Qadian.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/qadian-coach-night-960.jpg",
+            "src": "assets/photos/personal/curated/qadian-coach-arrival-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/qadian-coach-arrival-960.jpg",
             "width": 960
           }
         ]
@@ -1134,18 +1171,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "When we finally arrived at Sara-i-Waseem Guest House, the warmth of the welcome was unforgettable. Recent graduates and students of Jamia Ahmadiyya Qadian…",
     "photos": [
       {
-        "src": "assets/photos/personal/minarat-close-night.jpg",
-        "alt": "A close nighttime view of the illuminated Minarat-ul-Masih in Qadian.",
-        "caption": "Minarat-ul-Masih at night during the stay in Qadian.",
+        "src": "assets/illustrations/source/chapter-11-bahishti-maqbara.svg",
+        "alt": "A moonlit illustrated memorial landscape representing the nighttime visit to Bahishti Maqbara.",
+        "caption": "Original diary illustration for the group’s reverent nighttime visit to Bahishti Maqbara.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/minarat-close-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -1281,15 +1314,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "We only managed to sleep a few hours before it was time to wake up for Fajr prayers. The morning air in Qadian was cooler than expected, but for those of…",
     "photos": [
       {
-        "src": "assets/photos/personal/group-prayer.jpg",
-        "alt": "Members of the travel group gathered indoors for silent prayer in Qadian.",
-        "caption": "The group gathered for shared prayer in Qadian on November 27.",
+        "src": "assets/photos/personal/curated/darul-masih-guide-1600.jpg",
+        "alt": "An adult guide addressing the delegation inside a historic Qadian interior framed by dark wooden doors.",
+        "caption": "The group being guided through a historic Qadian interior on November 27.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/group-prayer-960.jpg",
+            "src": "assets/photos/personal/curated/darul-masih-guide-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/darul-masih-guide-960.jpg",
             "width": 960
           }
         ]
@@ -1387,15 +1425,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "After the tour of Darul Masih, we stayed in the area for Zuhr prayers. At the end of the tour, Sadr Khuddam-ul-Ahmadiyya USA, Imam Abdullah Dibba Sahib,…",
     "photos": [
       {
-        "src": "assets/photos/personal/group-prayer.jpg",
-        "alt": "The travel group standing together indoors with hands raised in silent prayer.",
-        "caption": "A shared prayer during the group’s November 27 programme in Qadian.",
+        "src": "assets/photos/personal/curated/collective-dua-1600.jpg",
+        "alt": "An overhead view of the delegation standing together with hands raised in collective dua.",
+        "caption": "The delegation gathered in collective dua on November 27.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/group-prayer-960.jpg",
+            "src": "assets/photos/personal/curated/collective-dua-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/collective-dua-960.jpg",
             "width": 960
           }
         ]
@@ -1522,18 +1565,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It’s 4 a.m. in Qadian. The cool predawn air feels calm and peaceful. The streets are quiet, and even the morning birds have yet to awaken. At…",
     "photos": [
       {
-        "src": "assets/photos/personal/minarat-night.jpg",
-        "alt": "Minarat-ul-Masih glowing above dark rooftops in Qadian at night.",
-        "caption": "Minarat-ul-Masih illuminated at night, recalling the Adhan at the heart of this chapter.",
+        "src": "assets/illustrations/source/chapter-14-voice-minaret.svg",
+        "alt": "A minaret at dawn with outward sound waves, illustrating the call to prayer described in the chapter.",
+        "caption": "Original diary illustration recalling the Adhan before dawn in Qadian.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/minarat-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -1631,15 +1670,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "After early morning prayers and a quick breakfast, we gathered for another day of exploring the historic and spiritual landmarks of Qadian. Right on time…",
     "photos": [
       {
-        "src": "assets/photos/personal/fazl-e-umar-press.jpg",
-        "alt": "The English and Urdu sign above Fazl-e-Umar Printing Press in Qadian.",
-        "caption": "Fazl-e-Umar Printing Press during the group’s Qadian visit.",
+        "src": "assets/photos/personal/curated/fazl-e-umar-press-1600.jpg",
+        "alt": "The bilingual facade sign for Fazl-e-Umar Printing Press with the visiting group entering below.",
+        "caption": "The Fazl-e-Umar Printing Press during the November 28 Qadian visit.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/fazl-e-umar-press-960.jpg",
+            "src": "assets/photos/personal/curated/fazl-e-umar-press-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/fazl-e-umar-press-960.jpg",
             "width": 960
           }
         ]
@@ -1765,18 +1809,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "The time between Zuhr and Maghrib in Qadian feels brief, often spent in personal prayers, reflection, or exploring the town beyond the Ahmadiyya Muhalla.…",
     "photos": [
       {
-        "src": "assets/photos/personal/fazl-e-umar-press.jpg",
-        "alt": "The bilingual sign on the facade of Fazl-e-Umar Printing Press in Qadian.",
-        "caption": "Fazl-e-Umar Printing Press during the same day’s institutional visits.",
+        "src": "assets/illustrations/source/chapter-16-service-reflection.svg",
+        "alt": "An illustrated service panel with a medical cross and the words Service and Reflection.",
+        "caption": "Original diary illustration for a day centered on service, care, conversation, and prayer.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/fazl-e-umar-press-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -1903,18 +1943,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It’s 4 a.m. on this cool Friday morning in Qadian. These beautiful verses by the Promised Messiah (as) echoed in my mind as I prepared for what promised…",
     "photos": [
       {
-        "src": "assets/photos/personal/minarat-night.jpg",
-        "alt": "The White Minaret illuminated against a black night sky in Qadian.",
-        "caption": "Minarat-ul-Masih on the group’s final Friday night in Qadian.",
+        "src": "assets/illustrations/source/chapter-17-friday-qadian.svg",
+        "alt": "An illustrated Qadian mosque skyline beneath the words A Friday to Remember.",
+        "caption": "Original diary illustration for Jumu’ah, Adhan, prayer, and gratitude in Qadian.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/minarat-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -2043,15 +2079,20 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Our hearts were getting heavier as the hours passed. We only had a few precious moments left in this sacred town, and I couldn’t help but feel the weight…",
     "photos": [
       {
-        "src": "assets/photos/personal/minarat-night.jpg",
-        "alt": "Minarat-ul-Masih lit against the night sky on the final evening in Qadian.",
-        "caption": "A final nighttime view of Minarat-ul-Masih before leaving Qadian.",
+        "src": "assets/photos/personal/curated/minarat-farewell-night-1600.jpg",
+        "alt": "A close nighttime view of the illuminated Minarat-ul-Masih against a black sky.",
+        "caption": "Minarat-ul-Masih photographed on the group’s final evening in Qadian.",
+        "kind": "photo",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
         "variants": [
           {
-            "src": "assets/photos/personal/minarat-night-960.jpg",
+            "src": "assets/photos/personal/curated/minarat-farewell-night-480.jpg",
+            "width": 480
+          },
+          {
+            "src": "assets/photos/personal/curated/minarat-farewell-night-960.jpg",
             "width": 960
           }
         ]
@@ -2189,18 +2230,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Sad. Tired. And reluctant to get up. It wasn’t because of fatigue; it was because we did not want to leave. But as the saying goes, every good thing must…",
     "photos": [
       {
-        "src": "assets/photos/personal/qadian-coach-night.jpg",
-        "alt": "The group’s tour coach photographed at night during the India journey.",
-        "caption": "The group’s coach during the Qadian leg of the journey.",
+        "src": "assets/illustrations/source/chapter-19-road-home.svg",
+        "alt": "A winding road beneath a route line from Qadian to Delhi.",
+        "caption": "Original diary illustration of the long road from Qadian back toward Delhi.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/qadian-coach-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -2290,18 +2327,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It is often emphasized by our elders in the Jamaat that we should maintain a strong connection with Huzur, regularly writing to him and seeking his…",
     "photos": [
       {
-        "src": "assets/photos/personal/qadian-coach-night.jpg",
-        "alt": "The group’s TS Travels tour coach stopped on a street at night.",
-        "caption": "The tour coach used during the group’s India journey.",
+        "src": "assets/illustrations/source/chapter-20-buffalo-miracle.svg",
+        "alt": "An illustrated boarding pass marked Rebooked for travel from Delhi to Toronto.",
+        "caption": "Original diary illustration of the unexpected Delhi-to-Toronto rebooking.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/qadian-coach-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -2391,18 +2424,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Today, we received solemn news: Respected Tayyib Ali Sahib, the last Dervish of Qadian, has passed away by the decree of Allah.",
     "photos": [
       {
-        "src": "assets/photos/personal/minarat-night.jpg",
-        "alt": "The illuminated Minarat-ul-Masih rising above Qadian at night.",
-        "caption": "Minarat-ul-Masih during the group’s final night in Qadian.",
+        "src": "assets/illustrations/source/chapter-21-last-dervish.svg",
+        "alt": "A subdued minaret illustration beside the words The Last Dervish of Qadian.",
+        "caption": "Original memorial illustration accompanying the solemn news about Qadian’s last Dervish.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/minarat-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   },
@@ -2451,46 +2480,14 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "When I started writing, my goal was simple: to take all of you along on this journey, even if you couldn’t physically be with us. It’s been a privilege to…",
     "photos": [
       {
-        "src": "assets/photos/personal/humayuns-tomb.jpg",
-        "alt": "Humayun’s Tomb framed through its gateway during the Delhi visit.",
-        "caption": "A final look back: Humayun’s Tomb in Delhi.",
+        "src": "assets/illustrations/source/chapter-22-final-message.svg",
+        "alt": "A circular minaret and journey motif above the words A Final Message.",
+        "caption": "Original closing illustration for the diary’s final message of prayer, service, and gratitude.",
+        "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
         "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/humayuns-tomb-960.jpg",
-            "width": 960
-          }
-        ]
-      },
-      {
-        "src": "assets/photos/personal/taj-mahal.jpg",
-        "alt": "The Taj Mahal and its central reflecting pool during the Agra visit.",
-        "caption": "A final look back: the Taj Mahal in Agra.",
-        "orientation": "landscape",
-        "width": 1600,
-        "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/taj-mahal-960.jpg",
-            "width": 960
-          }
-        ]
-      },
-      {
-        "src": "assets/photos/personal/minarat-night.jpg",
-        "alt": "Minarat-ul-Masih illuminated above Qadian at night.",
-        "caption": "A final look back: Minarat-ul-Masih in Qadian.",
-        "orientation": "landscape",
-        "width": 1600,
-        "height": 1067,
-        "variants": [
-          {
-            "src": "assets/photos/personal/minarat-night-960.jpg",
-            "width": 960
-          }
-        ]
+        "variants": []
       }
     ]
   }

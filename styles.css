@@ -97,11 +97,24 @@ a:hover {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   text-decoration: none;
+}
+
+.site-emblem {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #ffffff;
+  object-fit: cover;
 }
 
 .wordmark:hover {
@@ -419,9 +432,10 @@ a:hover {
 }
 
 .chapter-photo img {
+  display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .chapter-photo.portrait {
@@ -430,7 +444,6 @@ a:hover {
 }
 
 .chapter-photo.portrait img {
-  aspect-ratio: 4 / 5;
   background: var(--page);
   object-fit: contain;
 }
@@ -479,14 +492,17 @@ a:hover {
 
 .chapter-photo.gallery-slide img {
   width: 100%;
-  height: clamp(230px, 55vw, 500px);
-  max-height: none;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .chapter-photo.gallery-slide.portrait img {
   background: var(--page);
   object-fit: contain;
+}
+
+.chapter-illustration img {
+  background: var(--page);
 }
 
 .gallery-controls {

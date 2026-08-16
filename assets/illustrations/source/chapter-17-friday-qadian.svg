@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067">
+  <defs><linearGradient id="friday" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13242d"/><stop offset="1" stop-color="#005a8c"/></linearGradient></defs>
+  <rect width="1600" height="1067" fill="url(#friday)"/>
+  <circle cx="1260" cy="235" r="118" fill="#f79007"/>
+  <path d="M0 910h1600v157H0zM130 910V640h250v270M170 640q85-160 170 0M250 640v-170h20v170M510 910V560h350v350M570 560q115-210 230 0M675 560V330h20v230M1010 910V640h250v270M1050 640q85-160 170 0M1130 640V470h20v170" fill="#f5f9fb" opacity=".96"/>
+  <text x="150" y="185" fill="#9fd1e7" font-family="Open Sans, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="7">FRIDAY · NOVEMBER 29</text>
+  <text x="150" y="325" fill="#fff" font-family="Open Sans, Arial, sans-serif" font-size="88" font-weight="800">A FRIDAY TO</text>
+  <text x="150" y="425" fill="#fff" font-family="Open Sans, Arial, sans-serif" font-size="88" font-weight="800">REMEMBER</text>
+  <text x="150" y="500" fill="#f79007" font-family="Source Serif 4, Georgia, serif" font-size="38">Jumu’ah, Adhan, prayer, and gratitude</text>
+</svg>

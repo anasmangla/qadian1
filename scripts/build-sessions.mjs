@@ -84,6 +84,7 @@ entries.forEach((entry, index) => {
       src: photo.src,
       alt: photo.alt,
       caption: photo.caption,
+      kind: photo.kind || "photo",
       orientation: photo.orientation || "landscape",
       width: Number(photo.width) || undefined,
       height: Number(photo.height) || undefined,
@@ -115,6 +116,9 @@ for (const [index, photo] of photoManifest.entries()) {
   if (![photo.src, photo.alt, photo.caption].every(cleanWhitespace)) {
     throw new Error(`Photo ${index + 1} needs a source path, alt text, and caption.`);
   }
+  if (!["photo", "illustration"].includes(photo.kind || "photo")) {
+    throw new Error(`Photo ${index + 1} has an unsupported kind: ${photo.kind}`);
+  }
   const photoPath = path.resolve(projectDir, photo.src);
   if (!photoPath.startsWith(`${projectDir}${path.sep}`) || !fs.existsSync(photoPath)) {
     throw new Error(`Photo ${index + 1} is missing or outside the project: ${photo.src}`);
@@ -142,6 +146,14 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function mediaTypeFor(source) {
+  const extension = path.extname(String(source || "")).toLowerCase();
+  if (extension === ".svg") return "image/svg+xml";
+  if (extension === ".png") return "image/png";
+  if (extension === ".webp") return "image/webp";
+  return "image/jpeg";
 }
 
 function renderChapterList() {
@@ -197,8 +209,8 @@ function renderPhoto(photo, options = {}) {
     : "";
   const caption = `<span class="photo-caption">${escapeHtml(photo.caption)}</span>`;
   return `
-      <figure class="chapter-photo${inGallery ? " gallery-slide" : ""} ${escapeHtml(photo.orientation)}"${group}>
-        <img src="../${escapeHtml(photo.src)}"${srcset} alt="${escapeHtml(photo.alt)}"${dimensions} ${loading} decoding="async" sizes="(max-width: 800px) calc(100vw - 32px), 760px">
+      <figure class="chapter-photo${inGallery ? " gallery-slide" : ""}${photo.kind === "illustration" ? " chapter-illustration" : ""} ${escapeHtml(photo.orientation)}"${group}>
+        <img src="../${escapeHtml(photo.src)}"${srcset} alt="${escapeHtml(photo.alt)}"${dimensions} ${loading} decoding="async" sizes="(max-width: 520px) calc(100vw - 24px), (max-width: 800px) calc(100vw - 32px), 760px">
         <figcaption>${caption}
         </figcaption>
       </figure>`;
@@ -257,7 +269,7 @@ function chapterPage(entry, index) {
   const photo = entry.photos?.[0];
   const photoUrl = photo ? `https://anasmangla.github.io/qadian1/${photo.src}` : "";
   const photoMeta = photoUrl
-    ? `\n  <meta property="og:image" content="${photoUrl}">\n  <meta property="og:image:alt" content="${escapeHtml(photo.alt)}">\n  <meta property="og:image:width" content="${Number(photo.width)}">\n  <meta property="og:image:height" content="${Number(photo.height)}">\n  <meta property="og:image:type" content="image/jpeg">`
+    ? `\n  <meta property="og:image" content="${photoUrl}">\n  <meta property="og:image:alt" content="${escapeHtml(photo.alt)}">\n  <meta property="og:image:width" content="${Number(photo.width)}">\n  <meta property="og:image:height" content="${Number(photo.height)}">\n  <meta property="og:image:type" content="${mediaTypeFor(photo.src)}">`
     : "";
   const dateLine = `${entry.date}${entry.part ? ` · ${entry.part}` : ""}`;
   const dateMarkup = entry.dateIso
@@ -308,13 +320,14 @@ function chapterPage(entry, index) {
   <meta name="twitter:description" content="${escapeHtml(description)}">
   ${photoUrl ? `<meta name="twitter:image" content="${photoUrl}">\n  <meta name="twitter:image:alt" content="${escapeHtml(photo.alt)}">` : ""}
   <link rel="canonical" href="${canonical}">
+  <link rel="icon" type="image/png" href="../assets/ahmadiyya-logo.png">
   ${adjacentLinks}
   <title>Chapter ${number}: ${escapeHtml(entry.title)} | The Qadian Diary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles.css?v=6">
+  <link rel="stylesheet" href="../styles.css?v=7">
   <script type="application/ld+json">
 ${structuredJson.split("\n").map((line) => `  ${line}`).join("\n")}
   </script>
@@ -324,7 +337,10 @@ ${structuredJson.split("\n").map((line) => `  ${line}`).join("\n")}
 
   <header class="reader-header">
     <div class="container header-inner">
-      <a class="wordmark" href="../index.html">The Qadian Diary</a>
+      <a class="wordmark" href="../index.html">
+        <img class="site-emblem" src="../assets/ahmadiyya-logo.png" alt="" width="36" height="35">
+        <span>The Qadian Diary</span>
+      </a>
       <span class="author">Anas Mangla</span>
     </div>
   </header>

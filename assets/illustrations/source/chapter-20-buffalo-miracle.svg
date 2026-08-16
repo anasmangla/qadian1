@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067">
+  <rect width="1600" height="1067" fill="#e8f5fb"/>
+  <g transform="rotate(-4 800 535)">
+    <rect x="165" y="235" width="1270" height="610" rx="34" fill="#fff" stroke="#d8e6ec" stroke-width="8"/>
+    <path d="M1045 235v610" stroke="#d8e6ec" stroke-width="6" stroke-dasharray="18 18"/>
+    <rect x="215" y="290" width="360" height="90" rx="12" fill="#f79007"/>
+    <text x="395" y="355" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="52" font-weight="800" text-anchor="middle">REBOOKED</text>
+    <text x="215" y="495" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="36" font-weight="700">DELHI</text>
+    <text x="215" y="590" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="82" font-weight="800">DEL</text>
+    <path d="M490 565h265" stroke="#0077b8" stroke-width="16" stroke-linecap="round"/>
+    <path d="M725 520l70 45-70 45" fill="none" stroke="#0077b8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="840" y="495" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="36" font-weight="700">TORONTO</text>
+    <text x="840" y="590" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="82" font-weight="800">YYZ</text>
+    <text x="1110" y="390" fill="#426b7c" font-family="Open Sans, Arial, sans-serif" font-size="28" font-weight="700">DEC 01</text>
+    <text x="1110" y="450" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="46" font-weight="800">HOME</text>
+    <text x="1110" y="525" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="46" font-weight="800">BOUND</text>
+  </g>
+  <text x="800" y="980" fill="#13242d" font-family="Open Sans, Arial, sans-serif" font-size="52" font-weight="800" text-anchor="middle" letter-spacing="5">THE BUFFALO MIRACLE</text>
+</svg>
