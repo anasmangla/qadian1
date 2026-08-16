@@ -118,6 +118,31 @@ a:hover {
   padding-block: clamp(56px, 8vw, 104px);
 }
 
+.not-found {
+  min-height: 100vh;
+  max-width: 760px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding-block: 64px;
+}
+
+.not-found h1 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(2.7rem, 8vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.not-found > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 24px 0 28px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
 .cover-copy {
   max-width: 620px;
 }

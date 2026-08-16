@@ -28,6 +28,7 @@ function localTarget(pagePath, rawTarget) {
 const entries = [1, 2, 3].flatMap((number) => JSON.parse(read(`data/batch${number}.json`)));
 const manifest = JSON.parse(read("photo-manifest.json"));
 const indexHtml = read("index.html");
+const notFoundHtml = read("404.html");
 const slugs = entries.map((entry) => entry.slug);
 const slugSet = new Set(slugs);
 
@@ -92,7 +93,14 @@ check(sessionFiles.length === 22, `Expected 22 generated session pages, received
 check((indexHtml.match(/class="chapter-row /g) || []).length === 22, "index.html must contain all 22 chapters without JavaScript.");
 check(indexHtml.includes("<!-- chapter-list:start -->") && indexHtml.includes("<!-- chapter-list:end -->"), "index.html is missing chapter-list build markers.");
 check(/<ol\b[^>]*\bid="chapter-list"[^>]*\brole="list"/.test(indexHtml), "The static chapter index must preserve list semantics.");
+check(/<section\b[^>]*\bid="chapters"[^>]*\btabindex="-1"/.test(indexHtml), "The chapter skip-link target must be programmatically focusable.");
 check(!indexHtml.includes("diary-data.js"), "The home page should not load the full diary dataset.");
+check(indexHtml.includes('name="twitter:card" content="summary_large_image"'), "The home page is missing Twitter card metadata.");
+check(indexHtml.includes('property="og:image:alt"'), "The home page is missing Open Graph image alt text.");
+check(indexHtml.includes('href="styles.css?v=6"'), "The home page stylesheet version is stale.");
+check(notFoundHtml.includes('name="robots" content="noindex"'), "404.html must be excluded from search indexing.");
+check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/"'), "404.html needs a link back to the diary.");
+check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/styles.css?v=6"'), "404.html stylesheet version is stale.");
 
 slugs.forEach((slug, index) => {
   const fileName = `${slug}.html`;
@@ -109,10 +117,26 @@ slugs.forEach((slug, index) => {
   check(html.includes(`aria-valuetext="Chapter ${chapterNumber} of 22"`), `Progress text is wrong: ${slug}`);
   check(html.includes("Source+Serif+4"), `Source Serif 4 is missing: ${slug}`);
   check(html.includes("../reader.js?v=1"), `Reading-position script is missing: ${slug}`);
+  check(/<main\b[^>]*\bid="chapter-content"[^>]*\btabindex="-1"/.test(html), `Chapter skip-link target is not focusable: ${slug}`);
   check(/<img [^>]*sizes="\(max-width: 800px\)/.test(html), `Responsive image sizing is missing: ${slug}`);
+  check(html.includes('name="twitter:card" content="summary_large_image"'), `Twitter card metadata is missing: ${slug}`);
+  check(html.includes('property="og:image:alt"'), `Open Graph image alt text is missing: ${slug}`);
+  check(html.includes('property="og:image:width"') && html.includes('property="og:image:height"'), `Open Graph image dimensions are missing: ${slug}`);
+  check(html.includes('"@type": "Article"'), `Article structured data is missing: ${slug}`);
+  check(html.includes('href="../styles.css?v=6"'), `Chapter stylesheet version is stale: ${slug}`);
+  if (index < slugs.length - 1) {
+    check(/<time datetime="2024-\d{2}-\d{2}">/.test(html), `Machine-readable chapter date is missing: ${slug}`);
+    check(html.includes('property="article:published_time"'), `Published-time metadata is missing: ${slug}`);
+  }
+  const description = html.match(/<meta name="description" content="([^"]*)">/)?.[1] || "";
+  check(description.length > 0 && description.length <= 160, `Meta description must be 160 characters or fewer: ${slug}`);
   const photos = manifest.filter((photo) => photo.sessionSlug === slug);
   if (photos.some((photo) => Array.isArray(photo.variants) && photo.variants.length)) {
     check(/<img [^>]*srcset="/.test(html), `Responsive image variants are not rendered: ${slug}`);
+  }
+  if (photos.length > 1) {
+    check(html.includes('role="group" aria-roledescription="carousel"'), `Photo carousel semantics are missing: ${slug}`);
+    check(html.includes('aria-label="Photo carousel; use left and right arrow keys"'), `Photo carousel instructions are missing: ${slug}`);
   }
 
   if (previous) {
@@ -133,7 +157,11 @@ slugs.forEach((slug, index) => {
   }
 });
 
-const htmlFiles = [path.join(projectDir, "index.html"), ...sessionFiles.map((file) => path.join(sessionsDir, file))];
+const htmlFiles = [
+  path.join(projectDir, "index.html"),
+  path.join(projectDir, "404.html"),
+  ...sessionFiles.map((file) => path.join(sessionsDir, file))
+];
 for (const htmlPath of htmlFiles) {
   const html = fs.readFileSync(htmlPath, "utf8");
   const targets = [

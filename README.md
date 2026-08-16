@@ -11,6 +11,8 @@ A focused digital edition of Anas Mangla's 2024 Qadian travel diary.
 - Chapter-position progress and automatic dark reading mode
 - A restrained set of story-matched photographs with factual captions
 - Accessible, responsive layouts for phone, tablet, and desktop
+- Accessible photo-carousel controls and working skip links
+- Chapter-level social previews, structured article metadata, and a themed 404 page
 - Print-friendly styling
 - Bootstrap 5.3.8 for the responsive grid and cross-browser foundation
 - Visual system based on the live Anasonix website

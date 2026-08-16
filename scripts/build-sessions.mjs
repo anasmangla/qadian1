@@ -43,6 +43,13 @@ const displayDates = [
   "Undated closing entry"
 ];
 
+const displayDateIsos = [
+  "2024-11-20", "2024-11-21", "2024-11-22", "2024-11-23", "2024-11-23", "2024-11-24",
+  "2024-11-25", "2024-11-26", "2024-11-26", "2024-11-26", "2024-11-26", "2024-11-27",
+  "2024-11-27", "2024-11-28", "2024-11-28", "2024-11-28", "2024-11-29", "2024-11-29",
+  "2024-11-30", "2024-12-01", "2024-12-11", ""
+];
+
 const partLabels = [
   "", "", "", "Part I", "Part II", "", "", "Part I", "Part II", "Part III", "Part IV",
   "Part I", "Part II", "Part I", "Part II", "Part III", "Part I", "Part II", "", "", "", ""
@@ -57,12 +64,13 @@ function excerptFor(entry) {
     (block) => block.type === "paragraph" && cleanWhitespace(block.text).length > 80
   );
   const text = cleanWhitespace(paragraph?.text || entry.blocks?.[0]?.text || "");
-  if (text.length <= 220) return text;
-  return `${text.slice(0, 220).replace(/\s+\S*$/, "")}…`;
+  if (text.length <= 155) return text;
+  return `${text.slice(0, 155).replace(/\s+\S*$/, "")}…`;
 }
 
 entries.forEach((entry, index) => {
   entry.date = displayDates[index] || entry.date;
+  entry.dateIso = displayDateIsos[index] || "";
   entry.part = partLabels[index] || "";
   if (entry.slug === "the-flying-out") entry.title = "The Flight Out";
   if (entry.slug === "a-sad-news-the-last-dervish-of-qadian") {
@@ -209,7 +217,7 @@ function renderGallery(photos, chapterNumber) {
 
   return `
       <section class="chapter-gallery" data-gallery aria-label="Chapter photos">
-        <div class="gallery-viewport" data-gallery-viewport tabindex="0" aria-describedby="${galleryId}-status">
+        <div class="gallery-viewport" data-gallery-viewport tabindex="0" role="group" aria-roledescription="carousel" aria-label="Photo carousel; use left and right arrow keys" aria-describedby="${galleryId}-status">
           <div class="gallery-track">${slides}
           </div>
         </div>
@@ -248,7 +256,32 @@ function chapterPage(entry, index) {
   const description = entry.excerpt || `Chapter ${number} of The Qadian Diary by Anas Mangla.`;
   const photo = entry.photos?.[0];
   const photoUrl = photo ? `https://anasmangla.github.io/qadian1/${photo.src}` : "";
+  const photoMeta = photoUrl
+    ? `\n  <meta property="og:image" content="${photoUrl}">\n  <meta property="og:image:alt" content="${escapeHtml(photo.alt)}">\n  <meta property="og:image:width" content="${Number(photo.width)}">\n  <meta property="og:image:height" content="${Number(photo.height)}">\n  <meta property="og:image:type" content="image/jpeg">`
+    : "";
   const dateLine = `${entry.date}${entry.part ? ` · ${entry.part}` : ""}`;
+  const dateMarkup = entry.dateIso
+    ? `<time datetime="${escapeHtml(entry.dateIso)}">${escapeHtml(dateLine)}</time>`
+    : escapeHtml(dateLine);
+  const publishedMeta = entry.dateIso
+    ? `\n  <meta property="article:published_time" content="${escapeHtml(entry.dateIso)}">`
+    : "";
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: entry.title,
+    description,
+    author: { "@type": "Person", name: "Anas Mangla" },
+    mainEntityOfPage: canonical,
+    isPartOf: {
+      "@type": "Book",
+      name: "The Qadian Diary",
+      url: "https://anasmangla.github.io/qadian1/"
+    },
+    ...(entry.dateIso ? { datePublished: entry.dateIso } : {}),
+    ...(photoUrl ? { image: photoUrl } : {})
+  };
+  const structuredJson = JSON.stringify(structuredData, null, 2).replaceAll("<", "\\u003c");
   const adjacentLinks = [
     previous ? `<link rel="prev" href="${escapeHtml(previous.slug)}.html">` : "",
     next ? `<link rel="next" href="${escapeHtml(next.slug)}.html">` : "",
@@ -263,11 +296,17 @@ function chapterPage(entry, index) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f79007">
   <meta name="description" content="${escapeHtml(description)}">
+  <meta name="author" content="Anas Mangla">
   <meta property="og:title" content="${escapeHtml(entry.title)} | The Qadian Diary">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Qadian Diary">
   <meta property="og:url" content="${canonical}">
-  ${photoUrl ? `<meta property="og:image" content="${photoUrl}">` : ""}
+  ${photoMeta}${publishedMeta}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(entry.title)} | The Qadian Diary">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  ${photoUrl ? `<meta name="twitter:image" content="${photoUrl}">\n  <meta name="twitter:image:alt" content="${escapeHtml(photo.alt)}">` : ""}
   <link rel="canonical" href="${canonical}">
   ${adjacentLinks}
   <title>Chapter ${number}: ${escapeHtml(entry.title)} | The Qadian Diary</title>
@@ -275,7 +314,10 @@ function chapterPage(entry, index) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
+  <script type="application/ld+json">
+${structuredJson.split("\n").map((line) => `  ${line}`).join("\n")}
+  </script>
 </head>
 <body class="session-page" data-chapter-slug="${escapeHtml(entry.slug)}" data-chapter-number="${index + 1}" data-chapter-title="${escapeHtml(entry.title)}">
   <a class="skip-link" href="#chapter-content">Skip to the chapter</a>
@@ -287,7 +329,7 @@ function chapterPage(entry, index) {
     </div>
   </header>
 
-  <main id="chapter-content">
+  <main id="chapter-content" tabindex="-1">
     <article class="chapter container">
       <header class="chapter-heading">
         <p class="chapter-count">Chapter ${index + 1} of ${entries.length}</p>
@@ -295,7 +337,7 @@ function chapterPage(entry, index) {
           <span style="width: ${progress}%"></span>
         </div>
         <h1>${escapeHtml(entry.title)}</h1>
-        <p class="chapter-date">${escapeHtml(dateLine)}</p>
+        <p class="chapter-date">${dateMarkup}</p>
       </header>
       ${renderGallery(entry.photos, number)}
       <div class="chapter-body">
