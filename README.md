@@ -9,7 +9,7 @@ A focused digital edition of Anas Mangla's 2024 Qadian travel diary.
 - Previous and next chapter navigation
 - A private, on-device “Continue reading” link
 - Chapter-position progress and automatic dark reading mode
-- Distinct, capture-date-verified personal photographs with factual captions
+- Distinct personal photographs selected for chapter relevance, with factual captions and capture-date verification where source metadata is available
 - Original local diary illustrations where no honest personal photograph exists; no stock or generic web imagery
 - Accessible, responsive layouts for phone, tablet, and desktop
 - Accessible photo-carousel controls and working skip links
@@ -18,7 +18,7 @@ A focused digital edition of Anas Mangla's 2024 Qadian travel diary.
 - Bootstrap 5.3.8 for the responsive grid and cross-browser foundation
 - Visual system based on the live Anasonix website
 
-The published personal-photo assets are naturally corrected, web-optimized copies with embedded camera and location metadata removed. Each personal photograph has 480px, 960px, and 1600px candidates; the builder emits the matching `srcset` automatically. Original SVG diary illustrations scale cleanly at every viewport size without raster variants.
+The published personal-photo assets are naturally corrected, web-optimized copies with embedded camera and location metadata removed. Each photograph has a 480px candidate plus larger candidates up to the source image’s true resolution; images are never upscaled merely to manufacture a 960px or 1600px file. The builder emits the matching `srcset` automatically. Original SVG diary illustrations scale cleanly at every viewport size without raster variants.
 
 ## Rebuild the chapter pages
 

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067" role="img" aria-labelledby="title desc">
+  <title id="title">Toronto Pearson departure terminal</title>
+  <desc id="desc">An original editorial illustration of the Toronto Pearson airport entrance, departure doors, luggage, and an eastbound airplane.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dff1f8"/><stop offset="1" stop-color="#f8fbfd"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17313e"/><stop offset="1" stop-color="#2e6074"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1067" fill="url(#sky)"/>
+  <circle cx="1280" cy="175" r="92" fill="#fff" opacity=".72"/>
+  <path d="M1040 185l112-17 92-77 27 4-53 76 115 9 42-36 21 6-26 45 26 45-21 6-42-36-115 9 53 76-27 4-92-77-112-17c-19-3-19-17 0-20z" fill="#0077b8" transform="translate(2436 0) scale(-1 1)"/>
+  <path d="M0 905h1600v162H0z" fill="#d8e6ec"/>
+  <path d="M115 347h1370v558H115z" fill="#fff" stroke="#13242d" stroke-width="8"/>
+  <path d="M115 347h1370v138H115z" fill="#13242d"/>
+  <rect x="155" y="383" width="148" height="66" rx="10" fill="#f79007"/>
+  <text x="229" y="433" fill="#13242d" font-family="Open Sans,Arial,sans-serif" font-size="46" font-weight="800" text-anchor="middle">YYZ</text>
+  <text x="345" y="424" fill="#fff" font-family="Open Sans,Arial,sans-serif" font-size="56" font-weight="800">TORONTO PEARSON</text>
+  <text x="1265" y="424" fill="#9fd1e7" font-family="Open Sans,Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="5">DEPARTURES</text>
+  <rect x="180" y="535" width="560" height="320" rx="12" fill="url(#glass)"/>
+  <rect x="860" y="535" width="560" height="320" rx="12" fill="url(#glass)"/>
+  <path d="M460 535v320M1140 535v320" stroke="#9fd1e7" stroke-width="6" opacity=".65"/>
+  <path d="M315 690h290" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M568 655l47 35-47 35" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M995 690h290" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M1248 655l47 35-47 35" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(675 764)"><rect x="0" y="28" width="106" height="106" rx="14" fill="#f79007" stroke="#13242d" stroke-width="7"/><path d="M32 28V7h42v21" fill="none" stroke="#13242d" stroke-width="8"/><circle cx="25" cy="145" r="10" fill="#13242d"/><circle cx="82" cy="145" r="10" fill="#13242d"/></g>
+  <text x="800" y="995" fill="#426b7c" font-family="Open Sans,Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="4" text-anchor="middle">TORONTO TO QADIAN · THE JOURNEY BEGINS</text>
+</svg>

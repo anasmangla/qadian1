@@ -148,6 +148,16 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function renderIcon(name, className = "ui-icon") {
+  const paths = {
+    "arrow-left": '<path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path>',
+    "arrow-right": '<path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>'
+  };
+  const icon = paths[name];
+  if (!icon) throw new Error(`Unknown interface icon: ${name}`);
+  return `<svg class="${escapeHtml(className)}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${icon}</svg>`;
+}
+
 function mediaTypeFor(source) {
   const extension = path.extname(String(source || "")).toLowerCase();
   if (extension === ".svg") return "image/svg+xml";
@@ -167,7 +177,7 @@ function renderChapterList() {
               <span class="chapter-name">${escapeHtml(entry.title)}</span>
               <span class="chapter-date">${escapeHtml(date)}</span>
             </span>
-            <span class="chapter-arrow" aria-hidden="true">→</span>
+            <span class="chapter-arrow" aria-hidden="true">${renderIcon("arrow-right")}</span>
             <span class="sr-only">Read Chapter ${index + 1}</span>
           </a>
         </li>`;
@@ -235,13 +245,13 @@ function renderGallery(photos, chapterNumber) {
         </div>
         <div class="gallery-controls">
           <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous photo">
-            <span aria-hidden="true">←</span>
+            ${renderIcon("arrow-left")}
           </button>
           <p class="gallery-status" id="${galleryId}-status" aria-live="polite" aria-atomic="true">
             <span data-gallery-current>1</span> / ${photos.length}
           </p>
           <button class="gallery-button" type="button" data-gallery-next aria-label="Next photo">
-            <span aria-hidden="true">→</span>
+            ${renderIcon("arrow-right")}
           </button>
         </div>
       </section>`;
@@ -251,10 +261,12 @@ function navigationLink(entry, direction) {
   if (!entry) return "";
   const chapter = String(entry.chapterNumber).padStart(2, "0");
   const label = direction === "previous" ? "Previous" : "Next";
-  const arrow = direction === "previous" ? "←" : "→";
+  const directionContent = direction === "previous"
+    ? `${renderIcon("arrow-left")}<span>${label}</span>`
+    : `<span>${label}</span>${renderIcon("arrow-right")}`;
   return `
         <a class="chapter-nav-link ${direction}" href="${escapeHtml(entry.slug)}.html">
-          <span class="nav-direction">${direction === "previous" ? `${arrow} ${label}` : `${label} ${arrow}`}</span>
+          <span class="nav-direction">${directionContent}</span>
           <span class="nav-chapter">Chapter ${chapter}</span>
           <span class="nav-title">${escapeHtml(entry.title)}</span>
         </a>`;
@@ -327,7 +339,7 @@ function chapterPage(entry, index) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles.css?v=7">
+  <link rel="stylesheet" href="../styles.css?v=8">
   <script type="application/ld+json">
 ${structuredJson.split("\n").map((line) => `  ${line}`).join("\n")}
   </script>

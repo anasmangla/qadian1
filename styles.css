@@ -47,6 +47,13 @@ a:hover {
   color: var(--blue-dark);
 }
 
+.ui-icon {
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+  pointer-events: none;
+}
+
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -272,7 +279,9 @@ a:hover {
 }
 
 .continue-reading {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   margin: 20px 0 4px;
   color: var(--blue-dark);
   font-size: 0.88rem;
@@ -351,10 +360,11 @@ a:hover {
 }
 
 .chapter-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
   color: var(--blue);
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-align: right;
+  font-size: 1.18rem;
 }
 
 .reader-footer {
@@ -524,7 +534,7 @@ a:hover {
   background: var(--white);
   color: var(--blue-dark);
   font: inherit;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 800;
   transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
 }
@@ -677,11 +687,18 @@ a:hover {
 }
 
 .nav-direction {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   color: var(--blue-dark);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.chapter-nav-link.next .nav-direction {
+  justify-content: flex-end;
 }
 
 .nav-chapter {
@@ -795,6 +812,10 @@ a:hover {
   .chapter-nav-link.next:only-child {
     grid-column: auto;
     text-align: left;
+  }
+
+  .chapter-nav-link.next .nav-direction {
+    justify-content: flex-start;
   }
 
   .nav-title {

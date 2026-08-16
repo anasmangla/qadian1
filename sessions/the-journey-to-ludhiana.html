@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles.css?v=7">
+  <link rel="stylesheet" href="../styles.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -79,11 +79,33 @@
         <p class="chapter-date"><time datetime="2024-11-26">Tuesday, November 26, 2024 · Part I</time></p>
       </header>
 
-      <figure class="chapter-photo landscape">
+      <section class="chapter-gallery" data-gallery aria-label="Chapter photos">
+        <div class="gallery-viewport" data-gallery-viewport tabindex="0" role="group" aria-roledescription="carousel" aria-label="Photo carousel; use left and right arrow keys" aria-describedby="chapter-08-gallery-status">
+          <div class="gallery-track">
+      <figure class="chapter-photo gallery-slide landscape" role="group" aria-label="Photo 1 of 2">
         <img src="../assets/photos/personal/curated/ludhiana-road-sign-1600.jpg" srcset="../assets/photos/personal/curated/ludhiana-road-sign-480.jpg 480w, ../assets/photos/personal/curated/ludhiana-road-sign-960.jpg 960w, ../assets/photos/personal/curated/ludhiana-road-sign-1600.jpg 1600w" alt="A highway direction sign showing Jalandhar and Ludhiana, with part of the delegation coach visible." width="1600" height="1067" loading="eager" fetchpriority="high" decoding="async" sizes="(max-width: 520px) calc(100vw - 24px), (max-width: 800px) calc(100vw - 32px), 760px">
         <figcaption><span class="photo-caption">A road sign marking Ludhiana 73 kilometres ahead on November 26.</span>
         </figcaption>
       </figure>
+      <figure class="chapter-photo gallery-slide landscape" role="group" aria-label="Photo 2 of 2">
+        <img src="../assets/photos/personal/uploads/ludhiana-road-sign-traffic-959.webp" srcset="../assets/photos/personal/uploads/ludhiana-road-sign-traffic-480.webp 480w, ../assets/photos/personal/uploads/ludhiana-road-sign-traffic-959.webp 959w" alt="Traffic beneath road signs pointing toward Ludhiana City, Phagwara, and Jalandhar, with police at the roadside." width="959" height="719" loading="lazy" fetchpriority="low" decoding="async" sizes="(max-width: 520px) calc(100vw - 24px), (max-width: 800px) calc(100vw - 32px), 760px">
+        <figcaption><span class="photo-caption">Heavy traffic and road signs for Ludhiana City, Phagwara, and Jalandhar during the November 26 journey.</span>
+        </figcaption>
+      </figure>
+          </div>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous photo">
+            <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+          </button>
+          <p class="gallery-status" id="chapter-08-gallery-status" aria-live="polite" aria-atomic="true">
+            <span data-gallery-current>1</span> / 2
+          </p>
+          <button class="gallery-button" type="button" data-gallery-next aria-label="Next photo">
+            <svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </section>
       <div class="chapter-body">
         <p>Today is both a sad and an exciting day. Sad, because we are leaving Delhi and saying goodbye to the gracious and incredible hosts at Masjid Baitul Hadi. They have been so accommodating, always serving with smiles and quiet dedication. Words cannot do justice to their kindness. May Allah bless them and their families for their sacrifices and service.</p>
         <p>But today is also a day of excitement! We are headed to Qadian! Along the way, we will stop in Ludhiana and Hoshiarpur—two places deeply tied to the history of Ahmadiyyat.</p>
@@ -119,13 +141,13 @@ For the sake of Allah, please be our savior.</p></blockquote>
       <nav class="chapter-navigation" aria-label="Previous and next chapters">
 
         <a class="chapter-nav-link previous" href="a-day-at-the-taj-mahal.html">
-          <span class="nav-direction">← Previous</span>
+          <span class="nav-direction"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg><span>Previous</span></span>
           <span class="nav-chapter">Chapter 07</span>
           <span class="nav-title">A Day at the Taj Mahal</span>
         </a>
 
         <a class="chapter-nav-link next" href="the-road-to-hoshiarpur-and-onward-to-qadian.html">
-          <span class="nav-direction">Next →</span>
+          <span class="nav-direction"><span>Next</span><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
           <span class="nav-chapter">Chapter 09</span>
           <span class="nav-title">The Road to Hoshiarpur and Onward to Qadian</span>
         </a>

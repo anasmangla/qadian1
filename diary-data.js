@@ -48,9 +48,9 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Only a few hours remain before our flight departs from Toronto. Earlier today, someone shared pictures on WhatsApp from the airport, moments before…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-01-toronto-airport.svg",
-        "alt": "A blue airport departure sign reading Toronto Pearson International Airport and YYZ, with a right-pointing departure arrow.",
-        "caption": "Original diary illustration: Toronto Pearson International Airport, where the journey was scheduled to begin.",
+        "src": "assets/illustrations/source/chapter-01-toronto-pearson-v2.svg",
+        "alt": "An illustrated Toronto Pearson departure entrance marked YYZ, with luggage and an eastbound airplane.",
+        "caption": "Original diary illustration: entering Toronto Pearson for the journey from Toronto toward Qadian.",
         "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
@@ -120,9 +120,9 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Our journey began with a two-hour drive across the border from Buffalo, NY, to Toronto to board our Air France flight to India. The excitement was…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-02-flight-out.svg",
-        "alt": "A right-facing airplane traveling along a dotted route from Toronto on the left to Delhi on the right.",
-        "caption": "Original diary illustration: the west-to-east flight from Toronto toward Delhi.",
+        "src": "assets/illustrations/source/chapter-02-rebooking-v2.svg",
+        "alt": "An illustrated canceled Air France itinerary changing to an Air Canada rebooking, with a right-facing airplane traveling from Toronto to Delhi.",
+        "caption": "Original diary illustration: the canceled Air France booking gave way to a confirmed Air Canada flight to Delhi.",
         "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
@@ -819,6 +819,21 @@ window.QADIAN_DIARY_ENTRIES = [
             "width": 960
           }
         ]
+      },
+      {
+        "src": "assets/photos/personal/uploads/ludhiana-road-sign-traffic-959.webp",
+        "alt": "Traffic beneath road signs pointing toward Ludhiana City, Phagwara, and Jalandhar, with police at the roadside.",
+        "caption": "Heavy traffic and road signs for Ludhiana City, Phagwara, and Jalandhar during the November 26 journey.",
+        "kind": "photo",
+        "orientation": "landscape",
+        "width": 959,
+        "height": 719,
+        "variants": [
+          {
+            "src": "assets/photos/personal/uploads/ludhiana-road-sign-traffic-480.webp",
+            "width": 480
+          }
+        ]
       }
     ]
   },
@@ -1171,14 +1186,19 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "When we finally arrived at Sara-i-Waseem Guest House, the warmth of the welcome was unforgettable. Recent graduates and students of Jamia Ahmadiyya Qadian…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-11-bahishti-maqbara.svg",
-        "alt": "A moonlit illustrated memorial landscape representing the nighttime visit to Bahishti Maqbara.",
-        "caption": "Original diary illustration for the group’s reverent nighttime visit to Bahishti Maqbara.",
-        "kind": "illustration",
-        "orientation": "landscape",
-        "width": 1600,
-        "height": 1067,
-        "variants": []
+        "src": "assets/photos/personal/uploads/minaratul-masih-illuminated-night-741.webp",
+        "alt": "Minarat-ul-Masih illuminated at night, with two glowing clock faces against the dark sky.",
+        "caption": "Minarat-ul-Masih glowing over Qadian at night—the sight that greeted the group after its arrival.",
+        "kind": "photo",
+        "orientation": "portrait",
+        "width": 741,
+        "height": 989,
+        "variants": [
+          {
+            "src": "assets/photos/personal/uploads/minaratul-masih-illuminated-night-480.webp",
+            "width": 480
+          }
+        ]
       }
     ]
   },
@@ -1565,14 +1585,19 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It’s 4 a.m. in Qadian. The cool predawn air feels calm and peaceful. The streets are quiet, and even the morning birds have yet to awaken. At…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-14-voice-minaret.svg",
-        "alt": "A minaret at dawn with outward sound waves, illustrating the call to prayer described in the chapter.",
-        "caption": "Original diary illustration recalling the Adhan before dawn in Qadian.",
-        "kind": "illustration",
-        "orientation": "landscape",
-        "width": 1600,
-        "height": 1067,
-        "variants": []
+        "src": "assets/photos/personal/uploads/minaratul-masih-lane-view-741.webp",
+        "alt": "Minarat-ul-Masih viewed upward from a narrow Qadian lane between walls and utility lines.",
+        "caption": "A lane-level view of Minarat-ul-Masih, central to the chapter’s walk, prayers, and Adhan.",
+        "kind": "photo",
+        "orientation": "portrait",
+        "width": 741,
+        "height": 989,
+        "variants": [
+          {
+            "src": "assets/photos/personal/uploads/minaratul-masih-lane-view-480.webp",
+            "width": 480
+          }
+        ]
       }
     ]
   },
@@ -1809,9 +1834,9 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "The time between Zuhr and Maghrib in Qadian feels brief, often spent in personal prayers, reflection, or exploring the town beyond the Ahmadiyya Muhalla.…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-16-service-reflection.svg",
-        "alt": "An illustrated service panel with a medical cross and the words Service and Reflection.",
-        "caption": "Original diary illustration for a day centered on service, care, conversation, and prayer.",
+        "src": "assets/illustrations/source/chapter-16-noor-hospital-v2.svg",
+        "alt": "An illustrated Noor Hospital building beside hands holding a heart and medical cross.",
+        "caption": "Original diary illustration: Noor Hospital’s mission of care, compassion, and service to humanity.",
         "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
@@ -1943,14 +1968,19 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It’s 4 a.m. on this cool Friday morning in Qadian. These beautiful verses by the Promised Messiah (as) echoed in my mind as I prepared for what promised…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-17-friday-qadian.svg",
-        "alt": "An illustrated Qadian mosque skyline beneath the words A Friday to Remember.",
-        "caption": "Original diary illustration for Jumu’ah, Adhan, prayer, and gratitude in Qadian.",
-        "kind": "illustration",
-        "orientation": "landscape",
-        "width": 1600,
-        "height": 1067,
-        "variants": []
+        "src": "assets/photos/personal/uploads/minaratul-masih-daylight-palms-741.webp",
+        "alt": "The white Minarat-ul-Masih clock tower rising above palm trees beneath a clear daytime sky.",
+        "caption": "Minarat-ul-Masih beside Masjid Aqsa, the setting for the chapter’s Friday prayers and Adhan.",
+        "kind": "photo",
+        "orientation": "portrait",
+        "width": 741,
+        "height": 989,
+        "variants": [
+          {
+            "src": "assets/photos/personal/uploads/minaratul-masih-daylight-palms-480.webp",
+            "width": 480
+          }
+        ]
       }
     ]
   },
@@ -2230,9 +2260,9 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Sad. Tired. And reluctant to get up. It wasn’t because of fatigue; it was because we did not want to leave. But as the saying goes, every good thing must…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-19-road-home.svg",
-        "alt": "A winding road beneath a route line from Qadian to Delhi.",
-        "caption": "Original diary illustration of the long road from Qadian back toward Delhi.",
+        "src": "assets/illustrations/source/chapter-19-road-home-v2.svg",
+        "alt": "An illustrated coach traveling away from Qadian, with Minarat-ul-Masih behind it and a glowing light carried toward home.",
+        "caption": "Original diary illustration: leaving Qadian by coach while carrying its light and memories home.",
         "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
@@ -2327,9 +2357,9 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It is often emphasized by our elders in the Jamaat that we should maintain a strong connection with Huzur, regularly writing to him and seeking his…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-20-buffalo-miracle.svg",
-        "alt": "An illustrated boarding pass marked Rebooked for travel from Delhi to Toronto.",
-        "caption": "Original diary illustration of the unexpected Delhi-to-Toronto rebooking.",
+        "src": "assets/illustrations/source/chapter-20-delhi-rebooking-v2.svg",
+        "alt": "An illustrated Delhi Airport departure board changing from a canceled Air France itinerary to a confirmed Air India flight to Toronto.",
+        "caption": "Original diary illustration: the Delhi Airport cancellation and the unexpected Air India rebooking that carried the Buffalo group home.",
         "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,
@@ -2424,14 +2454,19 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Today, we received solemn news: Respected Tayyib Ali Sahib, the last Dervish of Qadian, has passed away by the decree of Allah.",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-21-last-dervish.svg",
-        "alt": "A subdued minaret illustration beside the words The Last Dervish of Qadian.",
-        "caption": "Original memorial illustration accompanying the solemn news about Qadian’s last Dervish.",
-        "kind": "illustration",
+        "src": "assets/photos/personal/uploads/last-dervish-with-visitors-qadian-959.webp",
+        "alt": "Tayyib Ali Sahib seated in a wheelchair between two visitors in a Qadian courtyard.",
+        "caption": "Meeting Respected Tayyib Ali Sahib, the last Dervish of Qadian, during the November 2024 journey.",
+        "kind": "photo",
         "orientation": "landscape",
-        "width": 1600,
-        "height": 1067,
-        "variants": []
+        "width": 959,
+        "height": 719,
+        "variants": [
+          {
+            "src": "assets/photos/personal/uploads/last-dervish-with-visitors-qadian-480.webp",
+            "width": 480
+          }
+        ]
       }
     ]
   },
@@ -2480,9 +2515,9 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "When I started writing, my goal was simple: to take all of you along on this journey, even if you couldn’t physically be with us. It’s been a privilege to…",
     "photos": [
       {
-        "src": "assets/illustrations/source/chapter-22-final-message.svg",
-        "alt": "A circular minaret and journey motif above the words A Final Message.",
-        "caption": "Original closing illustration for the diary’s final message of prayer, service, and gratitude.",
+        "src": "assets/illustrations/source/chapter-22-final-diary-v2.svg",
+        "alt": "An open illustrated travel diary signed With love and gratitude, Anas Mangla.",
+        "caption": "Original closing illustration: the final diary message of prayer, love, and gratitude.",
         "kind": "illustration",
         "orientation": "landscape",
         "width": 1600,

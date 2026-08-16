@@ -7,6 +7,26 @@
 
   if (!list || !continueLink) return;
 
+  function arrowIcon() {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "ui-icon");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+
+    const line = document.createElementNS(svg.namespaceURI, "path");
+    line.setAttribute("d", "M5 12h14");
+    const point = document.createElementNS(svg.namespaceURI, "path");
+    point.setAttribute("d", "m12 5 7 7-7 7");
+    svg.append(line, point);
+    return svg;
+  }
+
   const chapters = new Map(
     Array.from(list.querySelectorAll("a[data-chapter-slug]")).map((link) => [
       link.dataset.chapterSlug,
@@ -24,7 +44,9 @@
     if (!chapter) return;
 
     continueLink.href = chapter.href;
-    continueLink.textContent = `Continue reading · Chapter ${chapter.number}: ${chapter.title} →`;
+    const label = document.createElement("span");
+    label.textContent = `Continue reading · Chapter ${chapter.number}: ${chapter.title}`;
+    continueLink.replaceChildren(label, arrowIcon());
     continueLink.removeAttribute("hidden");
   } catch {
     // The complete chapter list remains available when storage is blocked.

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067" role="img" aria-labelledby="title desc">
+  <title id="title">The road home from Qadian</title>
+  <desc id="desc">An original diary illustration of a coach leaving Qadian while carrying its light and memories toward home.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dceef6"/><stop offset=".62" stop-color="#fff4dc"/><stop offset="1" stop-color="#f79007"/></linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#426b7c"/><stop offset="1" stop-color="#13242d"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1067" fill="url(#sky)"/>
+  <circle cx="1250" cy="300" r="125" fill="#fff7dc" opacity=".92"/>
+  <path d="M0 655Q285 590 525 648T970 620t630 40v407H0z" fill="#91b7a4"/>
+  <path d="M520 1067C645 860 732 735 800 650c68 85 155 210 280 417z" fill="url(#road)"/>
+  <path d="M790 710l-20 57h60l-20-57zm-54 155-38 108h204l-38-108z" fill="#fff" opacity=".9"/>
+  <g transform="translate(170 255)">
+    <path d="M105 335h340V175h-36v-83h-56V28h-46v64h-56v83h-36v160z" fill="#f8fbfd" stroke="#13242d" stroke-width="8"/>
+    <path d="M175 335h200v168H175z" fill="#f8fbfd" stroke="#13242d" stroke-width="8"/>
+    <circle cx="275" cy="205" r="40" fill="#fff" stroke="#13242d" stroke-width="7"/>
+    <path d="M275 178v29l22 15" fill="none" stroke="#13242d" stroke-width="7" stroke-linecap="round"/>
+    <path d="M80 504h390" stroke="#c66f00" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(930 630)">
+    <rect x="0" y="55" width="405" height="210" rx="35" fill="#f8fbfd" stroke="#13242d" stroke-width="9"/>
+    <path d="M52 55l52-88h215l52 88" fill="#0077b8" stroke="#13242d" stroke-width="9" stroke-linejoin="round"/>
+    <rect x="89" y="13" width="94" height="77" rx="10" fill="#e8f5fb"/><rect x="206" y="13" width="94" height="77" rx="10" fill="#e8f5fb"/>
+    <text x="202" y="150" fill="#13242d" font-family="Open Sans,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="middle">QADIAN 2024</text>
+    <circle cx="94" cy="270" r="41" fill="#13242d"/><circle cx="311" cy="270" r="41" fill="#13242d"/>
+    <path d="M365 18c60-36 105-31 136 16-62 3-109 28-141 77z" fill="#f79007"/>
+  </g>
+  <text x="95" y="105" fill="#c66f00" font-family="Open Sans,Arial,sans-serif" font-size="32" font-weight="800" letter-spacing="5">NOVEMBER 30 · QADIAN</text>
+  <text x="95" y="185" fill="#13242d" font-family="Open Sans,Arial,sans-serif" font-size="68" font-weight="800">CARRYING THE LIGHT HOME</text>
+  <text x="100" y="970" fill="#fff" font-family="Source Serif 4,Georgia,serif" font-size="34" font-style="italic">“We had left our hearts behind in Qadian.”</text>
+</svg>

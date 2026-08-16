@@ -53,8 +53,8 @@ for (const [index, photo] of manifest.entries()) {
   check(fs.existsSync(assetPath), `${label} asset is missing: ${photo.src}`);
 
   if (photo.kind === "photo") {
-    check(clean(photo.src).startsWith("assets/photos/personal/curated/"), `${label} personal photo must use the curated personal-photo directory.`);
-    check((photo.variants || []).length === 2, `${label} personal photo needs 480px and 960px responsive variants.`);
+    check(clean(photo.src).startsWith("assets/photos/personal/"), `${label} personal photo must use the personal-photo directory.`);
+    check((photo.variants || []).length >= 1, `${label} personal photo needs at least one smaller responsive variant.`);
   } else {
     check(clean(photo.src).startsWith("assets/illustrations/source/") && clean(photo.src).endsWith(".svg"), `${label} illustration must use an original local SVG.`);
     check((photo.variants || []).length === 0, `${label} SVG illustration should scale responsively without raster variants.`);
@@ -86,25 +86,41 @@ for (const [index, photo] of manifest.entries()) {
     check(fs.existsSync(variantPath), `${label}, variant ${variantIndex + 1} asset is missing: ${variant.src}`);
   }
   if (photo.kind === "photo") {
-    check(variantWidths.has(480) && variantWidths.has(960), `${label} is missing its 480px or 960px responsive candidate.`);
+    check(variantWidths.has(480), `${label} is missing its 480px responsive candidate.`);
+    check([...variantWidths].every((width) => width < Number(photo.width)), `${label} must not upscale a responsive image candidate beyond its primary source width.`);
+    if (Number(photo.width) >= 960) {
+      check(variantWidths.has(960), `${label} has enough source resolution and needs a 960px responsive candidate.`);
+    }
   }
 }
 
-const personalJpegs = new Set(
+const personalImages = new Set(
   manifest
     .filter((photo) => photo.kind === "photo")
     .flatMap((photo) => [photo.src, ...(photo.variants || []).map((variant) => variant.src)])
 );
 
-check(manifest[0]?.src.endsWith("chapter-01-toronto-airport.svg"), "Chapter 1 must use the Toronto Pearson airport-sign illustration.");
-check(manifest[1]?.src.endsWith("chapter-02-flight-out.svg"), "Chapter 2 must use the right-facing airplane illustration.");
+check(manifest[0]?.src.endsWith("chapter-01-toronto-pearson-v2.svg"), "Chapter 1 must use the redesigned Toronto Pearson illustration.");
+check(manifest[1]?.src.endsWith("chapter-02-rebooking-v2.svg"), "Chapter 2 must use the redesigned cancellation-to-rebooking illustration with a right-facing airplane.");
 const chapterSix = manifest.filter((photo) => photo.sessionSlug === "a-day-of-plans-changes-and-timeless-wonders");
 check(chapterSix[0]?.src.includes("red-fort-flag") && chapterSix[1]?.src.includes("qutub-minar-detail"), "Chapter 6 photo order must be Red Fort first and Qutub Minar second.");
 check(manifest.find((photo) => photo.sessionSlug === "a-day-at-the-taj-mahal")?.src.includes("taj-mahal-reflection"), "Chapter 7 must lead with the personal full-view Taj Mahal photo.");
+const chapterEight = manifest.filter((photo) => photo.sessionSlug === "the-journey-to-ludhiana");
+check(chapterEight[0]?.src.includes("ludhiana-road-sign-1600") && chapterEight[1]?.src.includes("ludhiana-road-sign-traffic"), "Chapter 8 must pair both personal Ludhiana road photographs in story order.");
+check(manifest.find((photo) => photo.sessionSlug === "arrival-in-qadian-and-visit-to-bahishti-maqbara")?.src.includes("minaratul-masih-illuminated-night"), "Chapter 11 must use the personal illuminated Minarat-ul-Masih photo.");
+check(manifest.find((photo) => photo.sessionSlug === "a-voice-from-the-minaret")?.src.includes("minaratul-masih-lane-view"), "Chapter 14 must use the personal lane-view Minarat-ul-Masih photo.");
+check(manifest.find((photo) => photo.sessionSlug === "a-day-of-service-and-reflection")?.src.endsWith("chapter-16-noor-hospital-v2.svg"), "Chapter 16 must use the redesigned Noor Hospital service illustration.");
+check(manifest.find((photo) => photo.sessionSlug === "a-friday-to-remember")?.src.includes("minaratul-masih-daylight-palms"), "Chapter 17 must use the personal daylight Minarat-ul-Masih photo.");
+check(manifest.find((photo) => photo.sessionSlug === "reflections-on-the-road-back-home")?.src.endsWith("chapter-19-road-home-v2.svg"), "Chapter 19 must use the redesigned Qadian road-home illustration.");
+check(manifest.find((photo) => photo.sessionSlug === "the-buffalo-miracle")?.src.endsWith("chapter-20-delhi-rebooking-v2.svg"), "Chapter 20 must use the redesigned Delhi Airport rebooking illustration.");
+check(manifest.find((photo) => photo.sessionSlug === "a-sad-news-the-last-dervish-of-qadian")?.src.includes("last-dervish-with-visitors-qadian"), "Chapter 21 must use the personal photograph with Tayyib Ali Sahib.");
+check(manifest.find((photo) => photo.sessionSlug === "a-final-message")?.src.endsWith("chapter-22-final-diary-v2.svg"), "Chapter 22 must use the redesigned signed open-diary closing illustration.");
 
-for (const relativePath of personalJpegs) {
+for (const relativePath of personalImages) {
   const image = fs.readFileSync(path.join(projectDir, relativePath));
-  check(image[0] === 0xff && image[1] === 0xd8, `Personal image is not a JPEG: ${relativePath}`);
+  const isJpeg = image[0] === 0xff && image[1] === 0xd8;
+  const isWebp = image.subarray(0, 4).toString("ascii") === "RIFF" && image.subarray(8, 12).toString("ascii") === "WEBP";
+  check(isJpeg || isWebp, `Personal image is not a supported JPEG or WebP file: ${relativePath}`);
   check(!image.includes(Buffer.from("Exif\0\0")), `Personal image still contains EXIF metadata: ${relativePath}`);
   check(!image.includes(Buffer.from("<x:xmpmeta")), `Personal image still contains XMP metadata: ${relativePath}`);
   check(!image.includes(Buffer.from("Photoshop 3.0")), `Personal image still contains Photoshop/IPTC metadata: ${relativePath}`);
@@ -125,12 +141,13 @@ check(indexHtml.includes('name="twitter:card" content="summary_large_image"'), "
 check(indexHtml.includes('property="og:image:alt"'), "The home page is missing Open Graph image alt text.");
 check(indexHtml.includes('class="site-emblem" src="assets/ahmadiyya-logo.png"'), "The home page is missing the Ahmadiyya emblem.");
 check(indexHtml.includes('rel="icon" type="image/png" href="assets/ahmadiyya-logo.png"'), "The home page is missing the Ahmadiyya favicon.");
-check(indexHtml.includes('href="styles.css?v=7"'), "The home page stylesheet version is stale.");
+check(indexHtml.includes('href="styles.css?v=8"'), "The home page stylesheet version is stale.");
+check(indexHtml.includes('src="app.js?v=4"'), "The home page script version is stale.");
 check(indexHtml.includes("qadian-route-cover-v2.webp"), "The home page must use the corrected eastbound cover image.");
 check(indexHtml.includes("right-facing airplane flying from Toronto"), "The cover alt text must identify the west-to-east plane direction.");
 check(notFoundHtml.includes('name="robots" content="noindex"'), "404.html must be excluded from search indexing.");
 check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/"'), "404.html needs a link back to the diary.");
-check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/styles.css?v=7"'), "404.html stylesheet version is stale.");
+check(notFoundHtml.includes('href="https://anasmangla.github.io/qadian1/styles.css?v=8"'), "404.html stylesheet version is stale.");
 
 slugs.forEach((slug, index) => {
   const fileName = `${slug}.html`;
@@ -155,7 +172,7 @@ slugs.forEach((slug, index) => {
   check(html.includes('property="og:image:alt"'), `Open Graph image alt text is missing: ${slug}`);
   check(html.includes('property="og:image:width"') && html.includes('property="og:image:height"'), `Open Graph image dimensions are missing: ${slug}`);
   check(html.includes('"@type": "Article"'), `Article structured data is missing: ${slug}`);
-  check(html.includes('href="../styles.css?v=7"'), `Chapter stylesheet version is stale: ${slug}`);
+  check(html.includes('href="../styles.css?v=8"'), `Chapter stylesheet version is stale: ${slug}`);
   if (index < slugs.length - 1) {
     check(/<time datetime="2024-\d{2}-\d{2}">/.test(html), `Machine-readable chapter date is missing: ${slug}`);
     check(html.includes('property="article:published_time"'), `Published-time metadata is missing: ${slug}`);

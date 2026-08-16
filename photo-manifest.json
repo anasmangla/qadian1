@@ -1,9 +1,9 @@
 [
   {
     "sessionSlug": "the-journey-begins",
-    "src": "assets/illustrations/source/chapter-01-toronto-airport.svg",
-    "caption": "Original diary illustration: Toronto Pearson International Airport, where the journey was scheduled to begin.",
-    "alt": "A blue airport departure sign reading Toronto Pearson International Airport and YYZ, with a right-pointing departure arrow.",
+    "src": "assets/illustrations/source/chapter-01-toronto-pearson-v2.svg",
+    "caption": "Original diary illustration: entering Toronto Pearson for the journey from Toronto toward Qadian.",
+    "alt": "An illustrated Toronto Pearson departure entrance marked YYZ, with luggage and an eastbound airplane.",
     "kind": "illustration",
     "orientation": "landscape",
     "width": 1600,
@@ -12,9 +12,9 @@
   },
   {
     "sessionSlug": "the-flying-out",
-    "src": "assets/illustrations/source/chapter-02-flight-out.svg",
-    "caption": "Original diary illustration: the west-to-east flight from Toronto toward Delhi.",
-    "alt": "A right-facing airplane traveling along a dotted route from Toronto on the left to Delhi on the right.",
+    "src": "assets/illustrations/source/chapter-02-rebooking-v2.svg",
+    "caption": "Original diary illustration: the canceled Air France booking gave way to a confirmed Air Canada flight to Delhi.",
+    "alt": "An illustrated canceled Air France itinerary changing to an Air Canada rebooking, with a right-facing airplane traveling from Toronto to Delhi.",
     "kind": "illustration",
     "orientation": "landscape",
     "width": 1600,
@@ -162,6 +162,22 @@
     ]
   },
   {
+    "sessionSlug": "the-journey-to-ludhiana",
+    "src": "assets/photos/personal/uploads/ludhiana-road-sign-traffic-959.webp",
+    "caption": "Heavy traffic and road signs for Ludhiana City, Phagwara, and Jalandhar during the November 26 journey.",
+    "alt": "Traffic beneath road signs pointing toward Ludhiana City, Phagwara, and Jalandhar, with police at the roadside.",
+    "kind": "photo",
+    "orientation": "landscape",
+    "width": 959,
+    "height": 719,
+    "variants": [
+      {
+        "src": "assets/photos/personal/uploads/ludhiana-road-sign-traffic-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  {
     "sessionSlug": "the-road-to-hoshiarpur-and-onward-to-qadian",
     "src": "assets/photos/personal/curated/hoshiarpur-road-sign-1600.jpg",
     "caption": "Hoshiarpur, five kilometres ahead during the nighttime journey toward Qadian.",
@@ -203,14 +219,19 @@
   },
   {
     "sessionSlug": "arrival-in-qadian-and-visit-to-bahishti-maqbara",
-    "src": "assets/illustrations/source/chapter-11-bahishti-maqbara.svg",
-    "caption": "Original diary illustration for the group’s reverent nighttime visit to Bahishti Maqbara.",
-    "alt": "A moonlit illustrated memorial landscape representing the nighttime visit to Bahishti Maqbara.",
-    "kind": "illustration",
-    "orientation": "landscape",
-    "width": 1600,
-    "height": 1067,
-    "variants": []
+    "src": "assets/photos/personal/uploads/minaratul-masih-illuminated-night-741.webp",
+    "caption": "Minarat-ul-Masih glowing over Qadian at night—the sight that greeted the group after its arrival.",
+    "alt": "Minarat-ul-Masih illuminated at night, with two glowing clock faces against the dark sky.",
+    "kind": "photo",
+    "orientation": "portrait",
+    "width": 741,
+    "height": 989,
+    "variants": [
+      {
+        "src": "assets/photos/personal/uploads/minaratul-masih-illuminated-night-480.webp",
+        "width": 480
+      }
+    ]
   },
   {
     "sessionSlug": "exploring-qadian-fajr-and-darul-masih",
@@ -254,14 +275,19 @@
   },
   {
     "sessionSlug": "a-voice-from-the-minaret",
-    "src": "assets/illustrations/source/chapter-14-voice-minaret.svg",
-    "caption": "Original diary illustration recalling the Adhan before dawn in Qadian.",
-    "alt": "A minaret at dawn with outward sound waves, illustrating the call to prayer described in the chapter.",
-    "kind": "illustration",
-    "orientation": "landscape",
-    "width": 1600,
-    "height": 1067,
-    "variants": []
+    "src": "assets/photos/personal/uploads/minaratul-masih-lane-view-741.webp",
+    "caption": "A lane-level view of Minarat-ul-Masih, central to the chapter’s walk, prayers, and Adhan.",
+    "alt": "Minarat-ul-Masih viewed upward from a narrow Qadian lane between walls and utility lines.",
+    "kind": "photo",
+    "orientation": "portrait",
+    "width": 741,
+    "height": 989,
+    "variants": [
+      {
+        "src": "assets/photos/personal/uploads/minaratul-masih-lane-view-480.webp",
+        "width": 480
+      }
+    ]
   },
   {
     "sessionSlug": "exploring-the-spiritual-landmarks-of-qadian",
@@ -285,9 +311,9 @@
   },
   {
     "sessionSlug": "a-day-of-service-and-reflection",
-    "src": "assets/illustrations/source/chapter-16-service-reflection.svg",
-    "caption": "Original diary illustration for a day centered on service, care, conversation, and prayer.",
-    "alt": "An illustrated service panel with a medical cross and the words Service and Reflection.",
+    "src": "assets/illustrations/source/chapter-16-noor-hospital-v2.svg",
+    "caption": "Original diary illustration: Noor Hospital’s mission of care, compassion, and service to humanity.",
+    "alt": "An illustrated Noor Hospital building beside hands holding a heart and medical cross.",
     "kind": "illustration",
     "orientation": "landscape",
     "width": 1600,
@@ -296,14 +322,19 @@
   },
   {
     "sessionSlug": "a-friday-to-remember",
-    "src": "assets/illustrations/source/chapter-17-friday-qadian.svg",
-    "caption": "Original diary illustration for Jumu’ah, Adhan, prayer, and gratitude in Qadian.",
-    "alt": "An illustrated Qadian mosque skyline beneath the words A Friday to Remember.",
-    "kind": "illustration",
-    "orientation": "landscape",
-    "width": 1600,
-    "height": 1067,
-    "variants": []
+    "src": "assets/photos/personal/uploads/minaratul-masih-daylight-palms-741.webp",
+    "caption": "Minarat-ul-Masih beside Masjid Aqsa, the setting for the chapter’s Friday prayers and Adhan.",
+    "alt": "The white Minarat-ul-Masih clock tower rising above palm trees beneath a clear daytime sky.",
+    "kind": "photo",
+    "orientation": "portrait",
+    "width": 741,
+    "height": 989,
+    "variants": [
+      {
+        "src": "assets/photos/personal/uploads/minaratul-masih-daylight-palms-480.webp",
+        "width": 480
+      }
+    ]
   },
   {
     "sessionSlug": "a-farewell-full-of-gratitude",
@@ -327,9 +358,9 @@
   },
   {
     "sessionSlug": "reflections-on-the-road-back-home",
-    "src": "assets/illustrations/source/chapter-19-road-home.svg",
-    "caption": "Original diary illustration of the long road from Qadian back toward Delhi.",
-    "alt": "A winding road beneath a route line from Qadian to Delhi.",
+    "src": "assets/illustrations/source/chapter-19-road-home-v2.svg",
+    "caption": "Original diary illustration: leaving Qadian by coach while carrying its light and memories home.",
+    "alt": "An illustrated coach traveling away from Qadian, with Minarat-ul-Masih behind it and a glowing light carried toward home.",
     "kind": "illustration",
     "orientation": "landscape",
     "width": 1600,
@@ -338,9 +369,9 @@
   },
   {
     "sessionSlug": "the-buffalo-miracle",
-    "src": "assets/illustrations/source/chapter-20-buffalo-miracle.svg",
-    "caption": "Original diary illustration of the unexpected Delhi-to-Toronto rebooking.",
-    "alt": "An illustrated boarding pass marked Rebooked for travel from Delhi to Toronto.",
+    "src": "assets/illustrations/source/chapter-20-delhi-rebooking-v2.svg",
+    "caption": "Original diary illustration: the Delhi Airport cancellation and the unexpected Air India rebooking that carried the Buffalo group home.",
+    "alt": "An illustrated Delhi Airport departure board changing from a canceled Air France itinerary to a confirmed Air India flight to Toronto.",
     "kind": "illustration",
     "orientation": "landscape",
     "width": 1600,
@@ -349,20 +380,25 @@
   },
   {
     "sessionSlug": "a-sad-news-the-last-dervish-of-qadian",
-    "src": "assets/illustrations/source/chapter-21-last-dervish.svg",
-    "caption": "Original memorial illustration accompanying the solemn news about Qadian’s last Dervish.",
-    "alt": "A subdued minaret illustration beside the words The Last Dervish of Qadian.",
-    "kind": "illustration",
+    "src": "assets/photos/personal/uploads/last-dervish-with-visitors-qadian-959.webp",
+    "caption": "Meeting Respected Tayyib Ali Sahib, the last Dervish of Qadian, during the November 2024 journey.",
+    "alt": "Tayyib Ali Sahib seated in a wheelchair between two visitors in a Qadian courtyard.",
+    "kind": "photo",
     "orientation": "landscape",
-    "width": 1600,
-    "height": 1067,
-    "variants": []
+    "width": 959,
+    "height": 719,
+    "variants": [
+      {
+        "src": "assets/photos/personal/uploads/last-dervish-with-visitors-qadian-480.webp",
+        "width": 480
+      }
+    ]
   },
   {
     "sessionSlug": "a-final-message",
-    "src": "assets/illustrations/source/chapter-22-final-message.svg",
-    "caption": "Original closing illustration for the diary’s final message of prayer, service, and gratitude.",
-    "alt": "A circular minaret and journey motif above the words A Final Message.",
+    "src": "assets/illustrations/source/chapter-22-final-diary-v2.svg",
+    "caption": "Original closing illustration: the final diary message of prayer, love, and gratitude.",
+    "alt": "An open illustrated travel diary signed With love and gratitude, Anas Mangla.",
     "kind": "illustration",
     "orientation": "landscape",
     "width": 1600,

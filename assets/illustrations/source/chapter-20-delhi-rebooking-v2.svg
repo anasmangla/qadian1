@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067" role="img" aria-labelledby="title desc">
+  <title id="title">The Buffalo Miracle at Delhi Airport</title>
+  <desc id="desc">An original diary illustration of a canceled Air France itinerary changing into a confirmed Air India flight from Delhi to Toronto.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef6fa"/><stop offset="1" stop-color="#f8fbfd"/></linearGradient></defs>
+  <rect width="1600" height="1067" fill="url(#bg)"/>
+  <text x="110" y="112" fill="#c66f00" font-family="Open Sans,Arial,sans-serif" font-size="32" font-weight="800" letter-spacing="5">DECEMBER 1 · DELHI AIRPORT</text>
+  <text x="110" y="215" fill="#13242d" font-family="Open Sans,Arial,sans-serif" font-size="78" font-weight="800">THE BUFFALO MIRACLE</text>
+  <rect x="110" y="300" width="1380" height="480" rx="26" fill="#13242d"/>
+  <text x="160" y="366" fill="#9fd1e7" font-family="Open Sans,Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="4">DEPARTURES</text>
+  <path d="M150 405h1300M150 575h1300" stroke="#426b7c" stroke-width="3"/>
+  <g font-family="Open Sans,Arial,sans-serif">
+    <text x="160" y="476" fill="#fff" font-size="36" font-weight="700">AIR FRANCE</text><text x="520" y="476" fill="#fff" font-size="36">PARIS / TORONTO</text>
+    <rect x="1130" y="428" width="270" height="72" rx="10" fill="#7b2d31"/><text x="1265" y="477" fill="#fff" font-size="31" font-weight="800" text-anchor="middle">CANCELED</text>
+    <text x="160" y="650" fill="#fff" font-size="36" font-weight="700">AIR INDIA</text><text x="520" y="650" fill="#fff" font-size="36">TORONTO</text>
+    <rect x="1130" y="602" width="270" height="72" rx="10" fill="#17745a"/><text x="1265" y="651" fill="#fff" font-size="31" font-weight="800" text-anchor="middle">CONFIRMED</text>
+  </g>
+  <path d="M170 718h950" stroke="#f79007" stroke-width="8" stroke-dasharray="18 19"/>
+  <g transform="translate(1070 680) scale(.66)" fill="#f79007"><path d="M0 34L171 0l95 32 130-13 43 18-153 48-115 133-39 5 53-122L48 122 0 95l113-29z"/></g>
+  <g transform="translate(185 835)">
+    <rect width="445" height="142" rx="18" fill="#fff" stroke="#d8e6ec" stroke-width="5"/>
+    <path d="M0 0l222 78L445 0" fill="none" stroke="#0077b8" stroke-width="7"/>
+    <circle cx="222" cy="78" r="27" fill="#f79007"/><path d="M211 78l8 9 16-20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="475" y="57" fill="#13242d" font-family="Open Sans,Arial,sans-serif" font-size="32" font-weight="800">PRAYERS REQUESTED</text>
+    <text x="475" y="103" fill="#426b7c" font-family="Source Serif 4,Georgia,serif" font-size="29">A cancellation became a way home.</text>
+  </g>
+</svg>
