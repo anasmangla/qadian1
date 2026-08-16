@@ -1,0 +1,50 @@
+name: Validate diary site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check gallery.js
+          node --check reader.js
+          node --check scripts/build-sessions.mjs
+          node --check scripts/strip-jpeg-metadata.mjs
+          node --check scripts/validate-site.mjs
+
+      - name: Regenerate the site
+        run: node scripts/build-sessions.mjs
+
+      - name: Confirm generated files are committed
+        run: git diff --exit-code
+
+      - name: Confirm generation is idempotent
+        run: |
+          node scripts/build-sessions.mjs
+          git diff --exit-code
+
+      - name: Validate chapters, navigation, assets, and licensing
+        run: node scripts/validate-site.mjs
+
+      - name: Check whitespace errors
+        run: git diff --check

@@ -6,6 +6,7 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(scriptDir, "..");
 const dataDir = path.join(projectDir, "data");
 const sessionsDir = path.join(projectDir, "sessions");
+const indexPath = path.join(projectDir, "index.html");
 
 const batchPaths = [1, 2, 3].map((number) => path.join(dataDir, `batch${number}.json`));
 const missing = batchPaths.filter((file) => !fs.existsSync(file));
@@ -78,13 +79,12 @@ entries.forEach((entry, index) => {
       orientation: photo.orientation || "landscape",
       width: Number(photo.width) || undefined,
       height: Number(photo.height) || undefined,
-      credit: photo.credit || photo.attribution || "",
-      creditUrl: photo.creditUrl || "",
-      sourceUrl: photo.sourceUrl || "",
-      license: photo.license || "",
-      licenseUrl: photo.licenseUrl || "",
-      modified: photo.modified === true ? "Resized" : (photo.modified || ""),
-      adaptationLicense: photo.adaptationLicense || ""
+      variants: Array.isArray(photo.variants)
+        ? photo.variants.map((variant) => ({
+          src: variant.src,
+          width: Number(variant.width) || undefined
+        }))
+        : []
     }));
 });
 
@@ -107,26 +107,23 @@ for (const [index, photo] of photoManifest.entries()) {
   if (![photo.src, photo.alt, photo.caption].every(cleanWhitespace)) {
     throw new Error(`Photo ${index + 1} needs a source path, alt text, and caption.`);
   }
-  const isShareAlike = /^CC BY-SA(?:\s|$)/i.test(cleanWhitespace(photo.license));
-  const isModifiedReference = photo.src.startsWith("assets/photos/reference/") && cleanWhitespace(photo.modified);
-  if (isShareAlike && isModifiedReference && photo.adaptationLicense !== "same") {
-    throw new Error(`Photo ${index + 1} must release its adapted version under the same CC BY-SA license.`);
-  }
-  if (photo.adaptationLicense && (photo.adaptationLicense !== "same" || !isShareAlike || !isModifiedReference)) {
-    throw new Error(`Photo ${index + 1} has invalid adaptation-license metadata.`);
-  }
-  if (isShareAlike && isModifiedReference) {
-    const attributionValues = [photo.credit || photo.attribution, photo.sourceUrl, photo.licenseUrl];
-    if (!attributionValues.every(cleanWhitespace)) {
-      throw new Error(`Photo ${index + 1} needs creator, source, and license attribution.`);
-    }
-    if (![photo.sourceUrl, photo.licenseUrl].every((url) => /^https?:\/\//i.test(url))) {
-      throw new Error(`Photo ${index + 1} needs valid source and license links.`);
-    }
-  }
   const photoPath = path.resolve(projectDir, photo.src);
   if (!photoPath.startsWith(`${projectDir}${path.sep}`) || !fs.existsSync(photoPath)) {
     throw new Error(`Photo ${index + 1} is missing or outside the project: ${photo.src}`);
+  }
+  const variantWidths = new Set();
+  for (const [variantIndex, variant] of (photo.variants || []).entries()) {
+    if (!cleanWhitespace(variant.src) || !(Number(variant.width) > 0)) {
+      throw new Error(`Photo ${index + 1}, variant ${variantIndex + 1} needs a source path and positive width.`);
+    }
+    if (variantWidths.has(Number(variant.width))) {
+      throw new Error(`Photo ${index + 1} has duplicate responsive variant widths.`);
+    }
+    variantWidths.add(Number(variant.width));
+    const variantPath = path.resolve(projectDir, variant.src);
+    if (!variantPath.startsWith(`${projectDir}${path.sep}`) || !fs.existsSync(variantPath)) {
+      throw new Error(`Photo ${index + 1}, variant ${variantIndex + 1} is missing or outside the project: ${variant.src}`);
+    }
   }
 }
 
@@ -137,6 +134,24 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function renderChapterList() {
+  return entries.map((entry, index) => {
+    const number = String(index + 1).padStart(2, "0");
+    const date = `${entry.date}${entry.part ? ` · ${entry.part}` : ""}`;
+    return `        <li class="chapter-row list-group-item p-0">
+          <a href="sessions/${escapeHtml(entry.slug)}.html" data-chapter-slug="${escapeHtml(entry.slug)}" data-chapter-number="${index + 1}" data-chapter-title="${escapeHtml(entry.title)}">
+            <span class="chapter-number" aria-hidden="true">${number}</span>
+            <span class="chapter-summary">
+              <span class="chapter-name">${escapeHtml(entry.title)}</span>
+              <span class="chapter-date">${escapeHtml(date)}</span>
+            </span>
+            <span class="chapter-arrow" aria-hidden="true">→</span>
+            <span class="sr-only">Read Chapter ${index + 1}</span>
+          </a>
+        </li>`;
+  }).join("\n");
 }
 
 function renderBlock(block) {
@@ -158,39 +173,24 @@ function renderPhoto(photo, options = {}) {
   const dimensions = Number(photo.width) > 0 && Number(photo.height) > 0
     ? ` width="${Number(photo.width)}" height="${Number(photo.height)}"`
     : "";
+  const responsiveSources = Array.isArray(photo.variants) && photo.variants.length
+    ? [...photo.variants, { src: photo.src, width: photo.width }]
+      .filter((variant) => cleanWhitespace(variant.src) && Number(variant.width) > 0)
+      .sort((a, b) => Number(a.width) - Number(b.width))
+    : [];
+  const srcset = responsiveSources.length
+    ? ` srcset="${responsiveSources.map((variant) => `../${escapeHtml(variant.src)} ${Number(variant.width)}w`).join(", ")}"`
+    : "";
   const loading = index === 0
     ? 'loading="eager" fetchpriority="high"'
-    : 'loading="lazy" fetchpriority="auto"';
+    : 'loading="lazy" fetchpriority="low"';
   const group = inGallery
     ? ` role="group" aria-label="Photo ${index + 1} of ${total}"`
     : "";
-  const creditUrl = /^https?:\/\//i.test(photo.creditUrl) ? photo.creditUrl : "";
-  const sourceUrl = /^https?:\/\//i.test(photo.sourceUrl) ? photo.sourceUrl : "";
-  const licenseUrl = /^https?:\/\//i.test(photo.licenseUrl) ? photo.licenseUrl : "";
-  const credit = cleanWhitespace(photo.credit);
-  const license = cleanWhitespace(photo.license);
-  const modified = cleanWhitespace(photo.modified);
-  const creditLabel = creditUrl
-    ? `<a href="${escapeHtml(creditUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(credit || "Creator")}</a>`
-    : (!sourceUrl ? escapeHtml(credit) : "");
-  const sourceLabel = sourceUrl
-    ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(creditUrl ? "Source" : (credit || "Source"))}</a>`
-    : "";
-  const licenseLabel = licenseUrl
-    ? `<a href="${escapeHtml(licenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(license || "License")}</a>`
-    : escapeHtml(license);
-  const adaptationLabel = modified && photo.adaptationLicense === "same"
-    ? `Adapted version: ${escapeHtml(modified)}; released under the same ${licenseLabel}`
-    : "";
-  const attribution = photo.adaptationLicense === "same"
-    ? [creditLabel, sourceLabel, adaptationLabel].filter(Boolean).join(" · ")
-    : [creditLabel, sourceLabel, licenseLabel, escapeHtml(modified)].filter(Boolean).join(" · ");
-  const caption = `
-          <span class="photo-caption">${escapeHtml(photo.caption)}</span>
-          ${attribution ? `<span class="photo-credit">${attribution}</span>` : ""}`;
+  const caption = `<span class="photo-caption">${escapeHtml(photo.caption)}</span>`;
   return `
       <figure class="chapter-photo${inGallery ? " gallery-slide" : ""} ${escapeHtml(photo.orientation)}"${group}>
-        <img src="../${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}"${dimensions} ${loading} decoding="async">
+        <img src="../${escapeHtml(photo.src)}"${srcset} alt="${escapeHtml(photo.alt)}"${dimensions} ${loading} decoding="async" sizes="(max-width: 800px) calc(100vw - 32px), 760px">
         <figcaption>${caption}
         </figcaption>
       </figure>`;
@@ -249,6 +249,12 @@ function chapterPage(entry, index) {
   const photo = entry.photos?.[0];
   const photoUrl = photo ? `https://anasmangla.github.io/qadian1/${photo.src}` : "";
   const dateLine = `${entry.date}${entry.part ? ` · ${entry.part}` : ""}`;
+  const adjacentLinks = [
+    previous ? `<link rel="prev" href="${escapeHtml(previous.slug)}.html">` : "",
+    next ? `<link rel="next" href="${escapeHtml(next.slug)}.html">` : "",
+    next ? `<link rel="prefetch" href="${escapeHtml(next.slug)}.html">` : ""
+  ].filter(Boolean).join("\n  ");
+  const progress = ((index + 1) / entries.length * 100).toFixed(2);
 
   return `<!doctype html>
 <html lang="en">
@@ -263,14 +269,15 @@ function chapterPage(entry, index) {
   <meta property="og:url" content="${canonical}">
   ${photoUrl ? `<meta property="og:image" content="${photoUrl}">` : ""}
   <link rel="canonical" href="${canonical}">
+  ${adjacentLinks}
   <title>Chapter ${number}: ${escapeHtml(entry.title)} | The Qadian Diary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles.css?v=4">
+  <link rel="stylesheet" href="../styles.css?v=5">
 </head>
-<body class="session-page">
+<body class="session-page" data-chapter-slug="${escapeHtml(entry.slug)}" data-chapter-number="${index + 1}" data-chapter-title="${escapeHtml(entry.title)}">
   <a class="skip-link" href="#chapter-content">Skip to the chapter</a>
 
   <header class="reader-header">
@@ -283,7 +290,10 @@ function chapterPage(entry, index) {
   <main id="chapter-content">
     <article class="chapter container">
       <header class="chapter-heading">
-        <p class="chapter-count">Chapter ${number} of ${entries.length}</p>
+        <p class="chapter-count">Chapter ${index + 1} of ${entries.length}</p>
+        <div class="chapter-progress" role="progressbar" aria-label="Diary progress" aria-valuemin="0" aria-valuemax="${entries.length}" aria-valuenow="${index + 1}" aria-valuetext="Chapter ${index + 1} of ${entries.length}">
+          <span style="width: ${progress}%"></span>
+        </div>
         <h1>${escapeHtml(entry.title)}</h1>
         <p class="chapter-date">${escapeHtml(dateLine)}</p>
       </header>
@@ -297,7 +307,8 @@ function chapterPage(entry, index) {
       </nav>
     </article>
   </main>
-  <script src="../gallery.js?v=2" defer></script>
+  <script src="../reader.js?v=1" defer></script>
+  <script src="../gallery.js?v=3" defer></script>
 </body>
 </html>
 `;
@@ -317,6 +328,18 @@ fs.writeFileSync(
   path.join(projectDir, "diary-data.js"),
   `window.QADIAN_DIARY_ENTRIES = ${JSON.stringify(entries, null, 2)};\n`
 );
+
+const chapterListStart = "<!-- chapter-list:start -->";
+const chapterListEnd = "<!-- chapter-list:end -->";
+const indexHtml = fs.readFileSync(indexPath, "utf8");
+const startAt = indexHtml.indexOf(chapterListStart);
+const endAt = indexHtml.indexOf(chapterListEnd);
+if (startAt < 0 || endAt < 0 || endAt < startAt) {
+  throw new Error("index.html needs chapter-list build markers.");
+}
+const chapterListHtml = `${chapterListStart}\n${renderChapterList()}\n        ${chapterListEnd}`;
+const builtIndexHtml = `${indexHtml.slice(0, startAt)}${chapterListHtml}${indexHtml.slice(endAt + chapterListEnd.length)}`;
+fs.writeFileSync(indexPath, builtIndexHtml);
 
 const sitemapUrls = [
   "https://anasmangla.github.io/qadian1/",

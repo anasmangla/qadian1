@@ -1,34 +1,32 @@
 (function () {
   "use strict";
 
-  const entries = Array.isArray(window.QADIAN_DIARY_ENTRIES) ? window.QADIAN_DIARY_ENTRIES : [];
+  const STORAGE_KEY = "qadian-diary:last-chapter";
   const list = document.getElementById("chapter-list");
+  const continueLink = document.getElementById("continue-reading");
 
-  function escapeHtml(value) {
-    return String(value || "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
+  if (!list || !continueLink) return;
+
+  const chapters = new Map(
+    Array.from(list.querySelectorAll("a[data-chapter-slug]")).map((link) => [
+      link.dataset.chapterSlug,
+      {
+        href: link.getAttribute("href"),
+        number: Number(link.dataset.chapterNumber),
+        title: link.dataset.chapterTitle
+      }
+    ])
+  );
+
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "null");
+    const chapter = saved && chapters.get(saved.slug);
+    if (!chapter) return;
+
+    continueLink.href = chapter.href;
+    continueLink.textContent = `Continue reading · Chapter ${chapter.number}: ${chapter.title} →`;
+    continueLink.removeAttribute("hidden");
+  } catch {
+    // The complete chapter list remains available when storage is blocked.
   }
-
-  if (!list) return;
-
-  list.innerHTML = entries.map((entry, index) => {
-    const number = String(index + 1).padStart(2, "0");
-    const date = `${entry.date}${entry.part ? ` · ${entry.part}` : ""}`;
-    return `
-      <li class="chapter-row list-group-item p-0">
-        <a href="sessions/${escapeHtml(entry.slug)}.html">
-          <span class="chapter-number" aria-hidden="true">${number}</span>
-          <span class="chapter-summary">
-            <span class="chapter-name">${escapeHtml(entry.title)}</span>
-            <span class="chapter-date">${escapeHtml(date)}</span>
-          </span>
-          <span class="chapter-arrow" aria-hidden="true">→</span>
-          <span class="sr-only">Read Chapter ${index + 1}</span>
-        </a>
-      </li>`;
-  }).join("");
 }());

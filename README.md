@@ -7,6 +7,8 @@ A focused digital edition of Anas Mangla's 2024 Qadian travel diary.
 - A clean index of 22 numbered chapters
 - One dedicated reading page per chapter
 - Previous and next chapter navigation
+- A private, on-device “Continue reading” link
+- Chapter-position progress and automatic dark reading mode
 - A restrained set of story-matched photographs with factual captions
 - Accessible, responsive layouts for phone, tablet, and desktop
 - Print-friendly styling
@@ -14,6 +16,7 @@ A focused digital edition of Anas Mangla's 2024 Qadian travel diary.
 - Visual system based on the live Anasonix website
 
 The published photo assets are web-optimized copies with embedded camera and location metadata removed.
+Optional responsive copies can be listed in a photo’s `variants` array as `{ "src": "…", "width": 800 }`; the builder will emit the matching `srcset` automatically.
 
 ## Rebuild the chapter pages
 
@@ -21,6 +24,20 @@ The cleaned diary source is stored in `data/`. After editing that source or `pho
 
 ```bash
 node scripts/build-sessions.mjs
+```
+
+Validate chapter generation, navigation, local assets, and photo licensing with:
+
+```bash
+node scripts/validate-site.mjs
+```
+
+The same checks run automatically in GitHub Actions on pushes and pull requests.
+
+To remove embedded capture and editing metadata after exporting new personal JPEGs, run:
+
+```bash
+node scripts/strip-jpeg-metadata.mjs
 ```
 
 ## Local preview
