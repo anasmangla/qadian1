@@ -274,7 +274,7 @@ function chapterPage(entry, index) {
       </nav>
     </article>
   </main>
-  <script src="../gallery.js?v=1" defer></script>
+  <script src="../gallery.js?v=2" defer></script>
 </body>
 </html>
 `;
