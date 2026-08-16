@@ -42,14 +42,9 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "InshAllah, this will not just be a trip, but a transformative experience for our souls."
       }
     ],
-    "section": "Departure & Delhi",
     "part": "",
-    "printedPages": [
-      3
-    ],
-    "readingMinutes": 2,
-    "excerpt": "Only a few hours remain before our flight departs from Toronto. Earlier today, someone shared pictures on WhatsApp from the airport, moments before boarding their flight to Qadian. As I looked at their faces filled with...",
-    "sessionNumber": 1,
+    "chapterNumber": 1,
+    "excerpt": "Only a few hours remain before our flight departs from Toronto. Earlier today, someone shared pictures on WhatsApp from the airport, moments before boarding their flight to Qadian. As I looked at their faces filled with…",
     "photos": []
   },
   {
@@ -107,14 +102,9 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Qadian, we are now only a flight away."
       }
     ],
-    "section": "Departure & Delhi",
     "part": "",
-    "printedPages": [
-      4
-    ],
-    "readingMinutes": 3,
-    "excerpt": "Our journey began with a two-hour drive across the border from Buffalo, NY, to Toronto to board our Air France flight to India. The excitement was tangible, and as part of the Qadian Team of Waqf-e-Nau’s instructions, we made...",
-    "sessionNumber": 2,
+    "chapterNumber": 2,
+    "excerpt": "Our journey began with a two-hour drive across the border from Buffalo, NY, to Toronto to board our Air France flight to India. The excitement was tangible, and as part of the Qadian Team of Waqf-e-Nau’s instructions,…",
     "photos": []
   },
   {
@@ -160,20 +150,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "This masjid holds its own historic significance. Both Hazrat Mirza Tahir Ahmad (rh) and Hazrat Mirza Masroor Ahmad (aba) have visited this mosque and stayed in its guest house during their respective trips to India."
       }
     ],
-    "section": "Departure & Delhi",
     "part": "",
-    "printedPages": [
-      5
-    ],
-    "readingMinutes": 2,
-    "excerpt": "We are finally in Delhi! Following the recommendations from the Waqf-e-Nau admin team, we made sure all group members were armed with masks as we navigated our way through the airport. Despite the anticipated concerns regarding...",
-    "sessionNumber": 3,
+    "chapterNumber": 3,
+    "excerpt": "We are finally in Delhi! Following the recommendations from the Waqf-e-Nau admin team, we made sure all group members were armed with masks as we navigated our way through the airport. Despite the anticipated concerns…",
     "photos": []
   },
   {
     "slug": "early-arrival-in-delhi",
     "date": "Saturday, November 23, 2024",
-    "shortDate": "Nov 23",
+    "shortDate": "Nov 23 · Part I",
     "title": "Early Arrival in Delhi",
     "subtitle": "Part I",
     "sourcePages": [
@@ -213,19 +198,14 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "In that moment, we felt truly connected—not just as travelers on this trip but as part of a greater bond tied to Khilafat, service, and faith."
       }
     ],
-    "section": "Delhi",
     "part": "Part I",
-    "printedPages": [
-      6
-    ],
-    "readingMinutes": 3,
-    "excerpt": "We arrived in Delhi at 3 a.m., stepping into the calm stillness of the early morning. The journey had been long, but the excitement of finally being in India—the land so deeply intertwined with the history of our Jamaat—kept us...",
-    "sessionNumber": 4,
+    "chapterNumber": 4,
+    "excerpt": "We arrived in Delhi at 3 a.m., stepping into the calm stillness of the early morning. The journey had been long, but the excitement of finally being in India—the land so deeply intertwined with the history of our…",
     "photos": [
       {
         "src": "assets/photos/early-arrival-in-delhi/masjid-baitul-hadi.webp",
         "alt": "Exterior of Masjid Baitul Hadi under a clear blue sky, with its white minaret and arched facade.",
-        "caption": "Masjid Baitul Hadi in Delhi, photographed on the delegation’s arrival day.",
+        "caption": "Masjid Baitul Hadi, Delhi.",
         "orientation": "landscape",
         "width": 1800,
         "height": 1200
@@ -235,7 +215,7 @@ window.QADIAN_DIARY_ENTRIES = [
   {
     "slug": "exploring-delhi-and-reflecting-on-allahs-plan",
     "date": "Saturday, November 23, 2024",
-    "shortDate": "Nov 23",
+    "shortDate": "Nov 23 · Part II",
     "title": "Exploring Delhi and Reflecting on Allah’s Plan",
     "subtitle": "Part II",
     "sourcePages": [
@@ -284,19 +264,14 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Satisfied and grateful, we settled in for the night, leaving tomorrow’s plans to Allah, the Best of Planners."
       }
     ],
-    "section": "Delhi",
     "part": "Part II",
-    "printedPages": [
-      7
-    ],
-    "readingMinutes": 3,
-    "excerpt": "After a long journey, we started our day with an excursion to Humayun’s Tomb, splitting into two buses. Though we didn’t have a guide and were unsure of the full significance of the site, the visit offered us a peaceful walk...",
-    "sessionNumber": 5,
+    "chapterNumber": 5,
+    "excerpt": "After a long journey, we started our day with an excursion to Humayun’s Tomb, splitting into two buses. Though we didn’t have a guide and were unsure of the full significance of the site, the visit offered us a peaceful…",
     "photos": [
       {
         "src": "assets/photos/exploring-delhi-and-reflecting-on-allahs-plan/humayuns-tomb-gateway.webp",
         "alt": "Humayun’s Tomb framed by a dark pointed arch, with visitors silhouetted in the passage.",
-        "caption": "Humayun’s Tomb framed through the gateway during the Delhi visit.",
+        "caption": "Humayun’s Tomb, seen through its gateway.",
         "orientation": "landscape",
         "width": 1800,
         "height": 1200
@@ -403,28 +378,14 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "By the end of the day, those tracking their steps on fitness devices reported walking nearly 10 miles! Exhausted but satisfied, we made our way back to our accommodations. As our eyes grew heavy with sleep, we couldn’t help but wonder: what does tomorrow have in store for us? Only Allah knows, and we leave it in His hands."
       }
     ],
-    "section": "Delhi",
     "part": "",
-    "printedPages": [
-      8,
-      9
-    ],
-    "readingMinutes": 4,
-    "excerpt": "Today was a long but exciting day, filled with changes, adjustments, and unexpected detours. Let’s start with the places we were supposed to visit but couldn’t: Tughlakabad Fort and Chandni Chowk. The Tughlakabad system was down,...",
-    "sessionNumber": 6,
+    "chapterNumber": 6,
+    "excerpt": "Today was a long but exciting day, filled with changes, adjustments, and unexpected detours. Let’s start with the places we were supposed to visit but couldn’t: Tughlakabad Fort and Chandni Chowk. The Tughlakabad system…",
     "photos": [
-      {
-        "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/qutub-minar.webp",
-        "alt": "Tall red-sandstone Qutub Minar against a pale blue sky, framed by leafy trees.",
-        "caption": "Qutub Minar rising above the trees during the Sunday tour.",
-        "orientation": "portrait",
-        "width": 1200,
-        "height": 1800
-      },
       {
         "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/red-fort.webp",
         "alt": "Indian national flag flying above the Red Fort’s domed pavilions and red sandstone ramparts, with birds in a blue sky.",
-        "caption": "The Indian flag above the red sandstone walls of the Red Fort.",
+        "caption": "The Red Fort, where the group ended the day.",
         "orientation": "landscape",
         "width": 1800,
         "height": 1200
@@ -576,29 +537,14 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Truly, this journey to the Taj Mahal was not just about seeing a historic monument but about drawing comparisons between earthly love and the divine love taught by Islam Ahmadiyyat. This was a day to remember."
       }
     ],
-    "section": "Agra",
     "part": "",
-    "printedPages": [
-      10,
-      11,
-      12
-    ],
-    "readingMinutes": 4,
+    "chapterNumber": 7,
     "excerpt": "But that’s not all. There’s so much more to it, and this is why you’re reading this. So, relax, grab a cup of tea, and join me on this incredible day trip.",
-    "sessionNumber": 7,
     "photos": [
       {
         "src": "assets/photos/a-day-at-the-taj-mahal/taj-mahal-gateway.webp",
         "alt": "Red sandstone gateway at the Taj Mahal complex beneath a pale afternoon sky, with small distant visitors in the forecourt.",
-        "caption": "The Taj Mahal’s monumental sandstone gateway and forecourt set the scene for the visit.",
-        "orientation": "landscape",
-        "width": 1800,
-        "height": 1200
-      },
-      {
-        "src": "assets/photos/a-day-at-the-taj-mahal/taj-marble-detail.webp",
-        "alt": "Close architectural view of the Taj Mahal’s white marble facade, arched recess, black calligraphy, and dome.",
-        "caption": "A close view reveals the Taj Mahal’s white-marble facade, dome, and calligraphic inlay.",
+        "caption": "The Great Gate of the Taj Mahal complex.",
         "orientation": "landscape",
         "width": 1800,
         "height": 1200
@@ -608,7 +554,7 @@ window.QADIAN_DIARY_ENTRIES = [
   {
     "slug": "the-journey-to-ludhiana",
     "date": "Tuesday, November 26, 2024",
-    "shortDate": "Nov 26",
+    "shortDate": "Nov 26 · Part I",
     "title": "The Journey to Ludhiana",
     "subtitle": "Part I",
     "sourcePages": [
@@ -738,21 +684,14 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Standing in this historic place, I reflected on how far the message of Ahmadiyyat has spread since those first Ba’aits. This is where it all began—a journey that now connects us across the globe."
       }
     ],
-    "section": "Road to Qadian",
     "part": "Part I",
-    "printedPages": [
-      13,
-      14,
-      15
-    ],
-    "readingMinutes": 5,
-    "excerpt": "Today is both a sad and an exciting day. Sad, because we are leaving Delhi and saying goodbye to the gracious and incredible hosts at Masjid Baitul Hadi. They have been so accommodating, always serving with smiles and quiet...",
-    "sessionNumber": 8,
+    "chapterNumber": 8,
+    "excerpt": "Today is both a sad and an exciting day. Sad, because we are leaving Delhi and saying goodbye to the gracious and incredible hosts at Masjid Baitul Hadi. They have been so accommodating, always serving with smiles and…",
     "photos": [
       {
         "src": "assets/photos/the-journey-to-ludhiana/road-to-ludhiana.webp",
         "alt": "View through a coach windshield of a divided highway and a green road sign for Jalandhar 131 kilometres and Ludhiana 73 kilometres.",
-        "caption": "A highway sign marks Ludhiana 73 kilometres ahead as the journey continues north.",
+        "caption": "Ludhiana, 73 kilometres ahead.",
         "orientation": "landscape",
         "width": 1800,
         "height": 1200
@@ -762,7 +701,7 @@ window.QADIAN_DIARY_ENTRIES = [
   {
     "slug": "the-road-to-hoshiarpur-and-onward-to-qadian",
     "date": "Tuesday, November 26, 2024",
-    "shortDate": "Nov 26",
+    "shortDate": "Nov 26 · Part II",
     "title": "The Road to Hoshiarpur and Onward to Qadian",
     "subtitle": "Part II",
     "sourcePages": [
@@ -840,31 +779,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Yes, it had been a long day. But now, we were just a few minutes from our final destination: Qadian. The excitement was palpable. We were eager to finally quench both our physical hunger and our spiritual thirst."
       }
     ],
-    "section": "Road to Qadian",
     "part": "Part II",
-    "printedPages": [
-      15,
-      16,
-      17
-    ],
-    "readingMinutes": 3,
-    "excerpt": "After completing our visit to Ludhiana, we gathered for Zuhr and Asr prayers in congregation and then shared a moment of combined silent supplication, reflecting on the significance of where we had been and the spiritual legacy...",
-    "sessionNumber": 9,
-    "photos": [
-      {
-        "src": "assets/photos/the-road-to-hoshiarpur-and-onward-to-qadian/hoshiarpur-road-sign.webp",
-        "alt": "Nighttime highway sign showing Hoshiarpur 5 kilometres, Chandigarh 137 kilometres, and Jalandhar 41 kilometres.",
-        "caption": "A nighttime road sign marks Hoshiarpur five kilometres away on the onward journey to Qadian.",
-        "orientation": "landscape",
-        "width": 1800,
-        "height": 1200
-      }
-    ]
+    "chapterNumber": 9,
+    "excerpt": "After completing our visit to Ludhiana, we gathered for Zuhr and Asr prayers in congregation and then shared a moment of combined silent supplication, reflecting on the significance of where we had been and the…",
+    "photos": []
   },
   {
     "slug": "arrival-in-qadian",
     "date": "Tuesday, November 26, 2024",
-    "shortDate": "Nov 26",
+    "shortDate": "Nov 26 · Part III",
     "title": "Arrival in Qadian",
     "subtitle": "Part III",
     "sourcePages": [
@@ -978,22 +901,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "We are in Qadian."
       }
     ],
-    "section": "Road to Qadian",
     "part": "Part III",
-    "printedPages": [
-      17,
-      18,
-      19
-    ],
-    "readingMinutes": 4,
-    "excerpt": "As I look around, many are struggling to keep their eyes open, worn out from the day’s long journey. Yet, the admins remain upright, engaged in quiet discussions, planning the next steps with precision and care. Their focus is...",
-    "sessionNumber": 10,
+    "chapterNumber": 10,
+    "excerpt": "As I look around, many are struggling to keep their eyes open, worn out from the day’s long journey. Yet, the admins remain upright, engaged in quiet discussions, planning the next steps with precision and care. Their…",
     "photos": []
   },
   {
     "slug": "arrival-in-qadian-and-visit-to-bahishti-maqbara",
     "date": "Tuesday, November 26, 2024",
-    "shortDate": "Nov 26",
+    "shortDate": "Nov 26 - Part IV",
     "title": "Arrival in Qadian and Visit to Bahishti Maqbara",
     "subtitle": "Part IV",
     "sourcePages": [
@@ -1083,22 +999,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Exhausted but spiritually rejuvenated, we prepared to rest for the night. It had been a day of immense learning and spiritual fulfillment. From Ludhiana to Hoshiarpur to Qadian, we had followed in the footsteps of the Promised Messiah (as). We couldn’t wait to explore Qadian further in the morning, but for now, it was time to reflect, rest, and recharge for the journey ahead."
       }
     ],
-    "section": "Road to Qadian",
     "part": "Part IV",
-    "printedPages": [
-      19,
-      20,
-      21
-    ],
-    "readingMinutes": 4,
-    "excerpt": "When we finally arrived at Sara-i-Waseem Guest House, the warmth of the welcome was unforgettable. Recent graduates and students of Jamia Ahmadiyya Qadian lined up outside, greeting us with chants of “Welcome” in Urdu and “You...",
-    "sessionNumber": 11,
+    "chapterNumber": 11,
+    "excerpt": "When we finally arrived at Sara-i-Waseem Guest House, the warmth of the welcome was unforgettable. Recent graduates and students of Jamia Ahmadiyya Qadian lined up outside, greeting us with chants of “Welcome” in Urdu…",
     "photos": []
   },
   {
     "slug": "exploring-qadian-fajr-and-darul-masih",
     "date": "Wednesday, November 27, 2024",
-    "shortDate": "Nov 27",
+    "shortDate": "Nov 27 - Part I",
     "title": "Exploring Qadian: Fajr and Darul Masih",
     "subtitle": "Part I",
     "sourcePages": [
@@ -1221,22 +1130,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "This experience reminded me of the blessings of seeing such sacred places with our own eyes. We should all endeavor to return here to witness it for ourselves. This visit is not just a historical exploration but a spiritual connection to the legacy of Hazrat Mirza Ghulam Ahmad (as) and his family, who dedicated their lives to the service of Allah and humanity."
       }
     ],
-    "section": "Qadian",
     "part": "Part I",
-    "printedPages": [
-      22,
-      23,
-      24
-    ],
-    "readingMinutes": 5,
-    "excerpt": "We only managed to sleep a few hours before it was time to wake up for Fajr prayers. The morning air in Qadian was cooler than expected, but for those of us used to Buffalo winters, it felt refreshingly mild. None of us were...",
-    "sessionNumber": 12,
+    "chapterNumber": 12,
+    "excerpt": "We only managed to sleep a few hours before it was time to wake up for Fajr prayers. The morning air in Qadian was cooler than expected, but for those of us used to Buffalo winters, it felt refreshingly mild. None of us…",
     "photos": []
   },
   {
     "slug": "a-day-immersed-in-prayer-and-reflection",
     "date": "Wednesday, November 27, 2024",
-    "shortDate": "Nov 27",
+    "shortDate": "Nov 27 - Part II",
     "title": "A Day Immersed in Prayer and Reflection",
     "subtitle": "Part II",
     "sourcePages": [
@@ -1318,22 +1220,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "One cannot be more blessed than this. One cannot ask for anything more than this on this holy trip! Alhamdulillah."
       }
     ],
-    "section": "Qadian",
     "part": "Part II",
-    "printedPages": [
-      24,
-      25,
-      26
-    ],
-    "readingMinutes": 4,
-    "excerpt": "After the tour of Darul Masih, we stayed in the area for Zuhr prayers. At the end of the tour, Sadr Khuddam-ul-Ahmadiyya USA, Imam Abdullah Dibba Sahib, once again reminded us of the significance of where we were. He encouraged...",
-    "sessionNumber": 13,
+    "chapterNumber": 13,
+    "excerpt": "After the tour of Darul Masih, we stayed in the area for Zuhr prayers. At the end of the tour, Sadr Khuddam-ul-Ahmadiyya USA, Imam Abdullah Dibba Sahib, once again reminded us of the significance of where we were. He…",
     "photos": []
   },
   {
     "slug": "a-voice-from-the-minaret",
     "date": "Thursday, November 28, 2024",
-    "shortDate": "Nov 28",
+    "shortDate": "Nov 28 - Part I",
     "title": "A Voice from the Minaret",
     "subtitle": "Part I",
     "sourcePages": [
@@ -1444,22 +1339,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "One cannot be more blessed than this. One cannot ask for anything greater on this holy trip. Alhamdulillah."
       }
     ],
-    "section": "Qadian",
     "part": "Part I",
-    "printedPages": [
-      27,
-      28,
-      29
-    ],
-    "readingMinutes": 4,
-    "excerpt": "It’s 4 a.m. in Qadian. The cool predawn air feels calm and peaceful. The streets are quiet, and even the morning birds have yet to awaken. At Sara-i-Waseem, the occasional creak of doors opening and closing signals that some,...",
-    "sessionNumber": 14,
+    "chapterNumber": 14,
+    "excerpt": "It’s 4 a.m. in Qadian. The cool predawn air feels calm and peaceful. The streets are quiet, and even the morning birds have yet to awaken. At Sara-i-Waseem, the occasional creak of doors opening and closing signals that…",
     "photos": []
   },
   {
     "slug": "exploring-the-spiritual-landmarks-of-qadian",
     "date": "Thursday, November 28, 2024",
-    "shortDate": "Nov 28",
+    "shortDate": "Nov 28 - Part II",
     "title": "Exploring the Spiritual Landmarks of Qadian",
     "subtitle": "Part II",
     "sourcePages": [
@@ -1544,21 +1432,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Each moment in Qadian is filled with spiritual blessings, and every place we visited today felt like a step closer to understanding the divine mission of the Promised Messiah (as). Alhamdulillah for this unforgettable day."
       }
     ],
-    "section": "Qadian",
     "part": "Part II",
-    "printedPages": [
-      29,
-      30
-    ],
-    "readingMinutes": 3,
-    "excerpt": "After early morning prayers and a quick breakfast, we gathered for another day of exploring the historic and spiritual landmarks of Qadian. Right on time at 9:30 a.m., our guide, Naseer Haq Acharia Murabbi of Ammore Kharja,...",
-    "sessionNumber": 15,
+    "chapterNumber": 15,
+    "excerpt": "After early morning prayers and a quick breakfast, we gathered for another day of exploring the historic and spiritual landmarks of Qadian. Right on time at 9:30 a.m., our guide, Naseer Haq Acharia Murabbi of Ammore…",
     "photos": []
   },
   {
     "slug": "a-day-of-service-and-reflection",
     "date": "Thursday, November 28, 2024",
-    "shortDate": "Nov 28",
+    "shortDate": "Nov 28 - Part III",
     "title": "A Day of Service and Reflection",
     "subtitle": "Part III",
     "sourcePages": [
@@ -1668,22 +1550,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "This had been another long and fulfilling day. Exhausted but content, we returned to Sara-i-Waseem for a quick dinner, preparing ourselves for our final full day in Qadian."
       }
     ],
-    "section": "Qadian",
     "part": "Part III",
-    "printedPages": [
-      31,
-      32,
-      33
-    ],
-    "readingMinutes": 4,
-    "excerpt": "The time between Zuhr and Maghrib in Qadian feels brief, often spent in personal prayers, reflection, or exploring the town beyond the Ahmadiyya Muhalla. Today and tomorrow, many of the Adhan calls are being performed by members...",
-    "sessionNumber": 16,
+    "chapterNumber": 16,
+    "excerpt": "The time between Zuhr and Maghrib in Qadian feels brief, often spent in personal prayers, reflection, or exploring the town beyond the Ahmadiyya Muhalla. Today and tomorrow, many of the Adhan calls are being performed…",
     "photos": []
   },
   {
     "slug": "a-friday-to-remember",
     "date": "Friday, November 29, 2024",
-    "shortDate": "Nov 29",
+    "shortDate": "Nov 29 - Part I",
     "title": "A Friday to Remember",
     "subtitle": "Part I",
     "sourcePages": [
@@ -1797,22 +1672,15 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "This day felt like the culmination of everything we had experienced here—a blend of spirituality, history, and community. As the sun began to set, we prepared for our final evening in this sacred town, cherishing the memories and lessons we would carry with us forever."
       }
     ],
-    "section": "Qadian",
     "part": "Part I",
-    "printedPages": [
-      34,
-      35,
-      36
-    ],
-    "readingMinutes": 5,
+    "chapterNumber": 17,
     "excerpt": "It’s 4 a.m. on this cool Friday morning in Qadian. These beautiful verses by the Promised Messiah (as) echoed in my mind as I prepared for what promised to be a deeply spiritual and emotional day.",
-    "sessionNumber": 17,
     "photos": []
   },
   {
     "slug": "a-farewell-full-of-gratitude",
     "date": "Friday, November 29, 2024",
-    "shortDate": "Nov 29",
+    "shortDate": "Nov 29 - Part II",
     "title": "A Farewell Full of Gratitude",
     "subtitle": "Part II",
     "sourcePages": [
@@ -1928,22 +1796,14 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "As we drifted off to sleep, our hearts were filled with gratitude for the countless blessings of this journey. May we carry this experience with us and let it inspire us to serve humanity and our Jamaat with renewed zeal."
       }
     ],
-    "section": "Qadian",
     "part": "Part II",
-    "printedPages": [
-      36,
-      37,
-      38,
-      39
-    ],
-    "readingMinutes": 5,
-    "excerpt": "Our hearts were getting heavier as the hours passed. We only had a few precious moments left in this sacred town, and I couldn’t help but feel the weight of the goodbye looming ahead. I didn’t want to leave, and I knew this was...",
-    "sessionNumber": 18,
+    "chapterNumber": 18,
+    "excerpt": "Our hearts were getting heavier as the hours passed. We only had a few precious moments left in this sacred town, and I couldn’t help but feel the weight of the goodbye looming ahead. I didn’t want to leave, and I knew…",
     "photos": [
       {
         "src": "assets/photos/a-farewell-full-of-gratitude/minarat-ul-masih-at-night.webp",
         "alt": "The illuminated Minarat-ul-Masih rises above dark building silhouettes at night.",
-        "caption": "Minarat-ul-Masih illuminated against the night sky on the group’s final evening in Qadian.",
+        "caption": "Minarat-ul-Masih on the final evening in Qadian.",
         "orientation": "landscape",
         "width": 1800,
         "height": 1200
@@ -2075,34 +1935,10 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "May Allah enable us to fulfill our responsibilities and make this journey a source of lasting blessings. Ameen."
       }
     ],
-    "section": "Return Journey",
     "part": "",
-    "printedPages": [
-      40,
-      41,
-      42
-    ],
-    "readingMinutes": 5,
+    "chapterNumber": 19,
     "excerpt": "Sad. Tired. And reluctant to get up. It wasn’t because of fatigue; it was because we did not want to leave. But as the saying goes, every good thing must come to an end.",
-    "sessionNumber": 19,
-    "photos": [
-      {
-        "src": "assets/photos/reflections-on-the-road-back-home/stone-fortification.webp",
-        "alt": "A weathered stone fortification with crenellated walls under a pale blue sky.",
-        "caption": "A weathered stone fortification visited on the journey back toward Delhi.",
-        "orientation": "landscape",
-        "width": 1800,
-        "height": 1200
-      },
-      {
-        "src": "assets/photos/reflections-on-the-road-back-home/stone-passage.webp",
-        "alt": "A narrow stone passage frames sunlight and greenery beyond.",
-        "caption": "Looking through a narrow stone passage during the return journey toward Delhi.",
-        "orientation": "portrait",
-        "width": 1200,
-        "height": 1800
-      }
-    ]
+    "photos": []
   },
   {
     "slug": "the-buffalo-miracle",
@@ -2184,15 +2020,9 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Alhamdulillah, we returned safely to our homes, our hearts filled with gratitude, and our faith strengthened through this unforgettable experience."
       }
     ],
-    "section": "Return Journey",
     "part": "",
-    "printedPages": [
-      43,
-      44
-    ],
-    "readingMinutes": 3,
-    "excerpt": "It is often emphasized by our elders in the Jamaat that we should maintain a strong connection with Huzur, regularly writing to him and seeking his prayers. Building a personal relationship with the Khalifa is not only...",
-    "sessionNumber": 20,
+    "chapterNumber": 20,
+    "excerpt": "It is often emphasized by our elders in the Jamaat that we should maintain a strong connection with Huzur, regularly writing to him and seeking his prayers. Building a personal relationship with the Khalifa is not only…",
     "photos": []
   },
   {
@@ -2275,15 +2105,9 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Long live the legacy of Darweshan-e-Qadian."
       }
     ],
-    "section": "Postscript",
     "part": "",
-    "printedPages": [
-      45,
-      46
-    ],
-    "readingMinutes": 2,
+    "chapterNumber": 21,
     "excerpt": "Today, a solemn news reached us: Respected Tayyib Ali Sahib, the last Dervish of Qadian, has passed away by the decree of Allah.",
-    "sessionNumber": 21,
     "photos": []
   },
   {
@@ -2325,14 +2149,9 @@ window.QADIAN_DIARY_ENTRIES = [
         "text": "Anas Mangla"
       }
     ],
-    "section": "Postscript",
     "part": "",
-    "printedPages": [
-      47
-    ],
-    "readingMinutes": 1,
-    "excerpt": "When I started writing, my goal was simple: to take all of you along on this journey, even if you couldn’t physically be with us. It’s been a privilege to share these experiences, and I hope they brought Qadian and its blessings...",
-    "sessionNumber": 22,
+    "chapterNumber": 22,
+    "excerpt": "When I started writing, my goal was simple: to take all of you along on this journey, even if you couldn’t physically be with us. It’s been a privilege to share these experiences, and I hope they brought Qadian and its…",
     "photos": []
   }
 ];

@@ -2,7 +2,7 @@
   {
     "sessionSlug": "early-arrival-in-delhi",
     "src": "assets/photos/early-arrival-in-delhi/masjid-baitul-hadi.webp",
-    "caption": "Masjid Baitul Hadi in Delhi, photographed on the delegation’s arrival day.",
+    "caption": "Masjid Baitul Hadi, Delhi.",
     "alt": "Exterior of Masjid Baitul Hadi under a clear blue sky, with its white minaret and arched facade.",
     "orientation": "landscape",
     "width": 1800,
@@ -11,7 +11,7 @@
   {
     "sessionSlug": "exploring-delhi-and-reflecting-on-allahs-plan",
     "src": "assets/photos/exploring-delhi-and-reflecting-on-allahs-plan/humayuns-tomb-gateway.webp",
-    "caption": "Humayun’s Tomb framed through the gateway during the Delhi visit.",
+    "caption": "Humayun’s Tomb, seen through its gateway.",
     "alt": "Humayun’s Tomb framed by a dark pointed arch, with visitors silhouetted in the passage.",
     "orientation": "landscape",
     "width": 1800,
@@ -19,17 +19,8 @@
   },
   {
     "sessionSlug": "a-day-of-plans-changes-and-timeless-wonders",
-    "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/qutub-minar.webp",
-    "caption": "Qutub Minar rising above the trees during the Sunday tour.",
-    "alt": "Tall red-sandstone Qutub Minar against a pale blue sky, framed by leafy trees.",
-    "orientation": "portrait",
-    "width": 1200,
-    "height": 1800
-  },
-  {
-    "sessionSlug": "a-day-of-plans-changes-and-timeless-wonders",
     "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/red-fort.webp",
-    "caption": "The Indian flag above the red sandstone walls of the Red Fort.",
+    "caption": "The Red Fort, where the group ended the day.",
     "alt": "Indian national flag flying above the Red Fort’s domed pavilions and red sandstone ramparts, with birds in a blue sky.",
     "orientation": "landscape",
     "width": 1800,
@@ -38,17 +29,8 @@
   {
     "sessionSlug": "a-day-at-the-taj-mahal",
     "src": "assets/photos/a-day-at-the-taj-mahal/taj-mahal-gateway.webp",
-    "caption": "The Taj Mahal’s monumental sandstone gateway and forecourt set the scene for the visit.",
+    "caption": "The Great Gate of the Taj Mahal complex.",
     "alt": "Red sandstone gateway at the Taj Mahal complex beneath a pale afternoon sky, with small distant visitors in the forecourt.",
-    "orientation": "landscape",
-    "width": 1800,
-    "height": 1200
-  },
-  {
-    "sessionSlug": "a-day-at-the-taj-mahal",
-    "src": "assets/photos/a-day-at-the-taj-mahal/taj-marble-detail.webp",
-    "caption": "A close view reveals the Taj Mahal’s white-marble facade, dome, and calligraphic inlay.",
-    "alt": "Close architectural view of the Taj Mahal’s white marble facade, arched recess, black calligraphy, and dome.",
     "orientation": "landscape",
     "width": 1800,
     "height": 1200
@@ -56,17 +38,8 @@
   {
     "sessionSlug": "the-journey-to-ludhiana",
     "src": "assets/photos/the-journey-to-ludhiana/road-to-ludhiana.webp",
-    "caption": "A highway sign marks Ludhiana 73 kilometres ahead as the journey continues north.",
+    "caption": "Ludhiana, 73 kilometres ahead.",
     "alt": "View through a coach windshield of a divided highway and a green road sign for Jalandhar 131 kilometres and Ludhiana 73 kilometres.",
-    "orientation": "landscape",
-    "width": 1800,
-    "height": 1200
-  },
-  {
-    "sessionSlug": "the-road-to-hoshiarpur-and-onward-to-qadian",
-    "src": "assets/photos/the-road-to-hoshiarpur-and-onward-to-qadian/hoshiarpur-road-sign.webp",
-    "caption": "A nighttime road sign marks Hoshiarpur five kilometres away on the onward journey to Qadian.",
-    "alt": "Nighttime highway sign showing Hoshiarpur 5 kilometres, Chandigarh 137 kilometres, and Jalandhar 41 kilometres.",
     "orientation": "landscape",
     "width": 1800,
     "height": 1200
@@ -74,28 +47,10 @@
   {
     "sessionSlug": "a-farewell-full-of-gratitude",
     "src": "assets/photos/a-farewell-full-of-gratitude/minarat-ul-masih-at-night.webp",
-    "caption": "Minarat-ul-Masih illuminated against the night sky on the group’s final evening in Qadian.",
+    "caption": "Minarat-ul-Masih on the final evening in Qadian.",
     "alt": "The illuminated Minarat-ul-Masih rises above dark building silhouettes at night.",
     "orientation": "landscape",
     "width": 1800,
     "height": 1200
-  },
-  {
-    "sessionSlug": "reflections-on-the-road-back-home",
-    "src": "assets/photos/reflections-on-the-road-back-home/stone-fortification.webp",
-    "caption": "A weathered stone fortification visited on the journey back toward Delhi.",
-    "alt": "A weathered stone fortification with crenellated walls under a pale blue sky.",
-    "orientation": "landscape",
-    "width": 1800,
-    "height": 1200
-  },
-  {
-    "sessionSlug": "reflections-on-the-road-back-home",
-    "src": "assets/photos/reflections-on-the-road-back-home/stone-passage.webp",
-    "caption": "Looking through a narrow stone passage during the return journey toward Delhi.",
-    "alt": "A narrow stone passage frames sunlight and greenery beyond.",
-    "orientation": "portrait",
-    "width": 1200,
-    "height": 1800
   }
 ]

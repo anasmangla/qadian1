@@ -1,24 +1,23 @@
 # The Qadian Diary
 
-A responsive, searchable digital edition of Anas Mangla's 2024 Qadian travel diary.
+A focused digital edition of Anas Mangla's 2024 Qadian travel diary.
 
 ## Features
 
-- Day-by-day timeline with one dedicated page per diary session
-- Date-matched photographs from the 2024 journey, with captions and an accessible lightbox
-- Previous and next navigation between multi-part sessions
-- Search by date, place, person, or theme
-- Reading-progress indicator
-- Accessible keyboard and screen-reader behavior
-- Responsive layouts for phone, tablet, and desktop
+- A clean index of 22 numbered chapters
+- One dedicated reading page per chapter
+- Previous and next chapter navigation
+- A restrained set of story-matched photographs with factual captions
+- Accessible, responsive layouts for phone, tablet, and desktop
 - Print-friendly styling
+- Bootstrap 5.3.8 for the responsive grid and cross-browser foundation
 - Visual system based on the live Anasonix website
 
 The published photo assets are web-optimized copies with embedded camera and location metadata removed.
 
-## Rebuild the session pages
+## Rebuild the chapter pages
 
-The cleaned diary source is stored in `data/`. After editing that source or `photo-manifest.json`, regenerate the individual pages and search data with:
+The cleaned diary source is stored in `data/`. After editing that source or `photo-manifest.json`, regenerate the chapter pages and index data with:
 
 ```bash
 node scripts/build-sessions.mjs
@@ -40,4 +39,4 @@ This project is designed for GitHub Pages at:
 
 `https://anasmangla.github.io/qadian1/`
 
-The site uses relative asset paths and requires no build step.
+GitHub Pages publishes directly from the root of `main`. The site uses relative asset paths and requires no deployment build step.
