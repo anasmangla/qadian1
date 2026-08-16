@@ -17,6 +17,7 @@
     let resizeFrame = 0;
 
     const clamp = (index) => Math.min(Math.max(index, 0), slides.length - 1);
+    const slidePosition = (slide) => slide.offsetLeft - slides[0].offsetLeft;
 
     function update(index) {
       currentIndex = clamp(index);
@@ -27,15 +28,15 @@
 
     function nearestSlideIndex() {
       return slides.reduce((nearest, slide, index) => {
-        const currentDistance = Math.abs(slides[nearest].offsetLeft - viewport.scrollLeft);
-        const candidateDistance = Math.abs(slide.offsetLeft - viewport.scrollLeft);
+        const currentDistance = Math.abs(slidePosition(slides[nearest]) - viewport.scrollLeft);
+        const candidateDistance = Math.abs(slidePosition(slide) - viewport.scrollLeft);
         return candidateDistance < currentDistance ? index : nearest;
       }, 0);
     }
 
     function goTo(index, behavior = reducedMotion.matches ? "auto" : "smooth") {
       const nextIndex = clamp(index);
-      viewport.scrollTo({ left: slides[nextIndex].offsetLeft, behavior });
+      viewport.scrollTo({ left: slidePosition(slides[nextIndex]), behavior });
       update(nextIndex);
     }
 
@@ -65,7 +66,7 @@
       const resizeObserver = new ResizeObserver(() => {
         window.cancelAnimationFrame(resizeFrame);
         resizeFrame = window.requestAnimationFrame(() => {
-          viewport.scrollTo({ left: slides[currentIndex].offsetLeft, behavior: "auto" });
+          viewport.scrollTo({ left: slidePosition(slides[currentIndex]), behavior: "auto" });
         });
       });
       resizeObserver.observe(viewport);
