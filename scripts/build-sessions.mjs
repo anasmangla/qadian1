@@ -77,11 +77,24 @@ entries.forEach((entry, index) => {
       caption: photo.caption,
       orientation: photo.orientation || "landscape",
       width: Number(photo.width) || undefined,
-      height: Number(photo.height) || undefined
+      height: Number(photo.height) || undefined,
+      credit: photo.credit || photo.attribution || "",
+      creditUrl: photo.creditUrl || "",
+      sourceUrl: photo.sourceUrl || "",
+      license: photo.license || "",
+      licenseUrl: photo.licenseUrl || "",
+      modified: photo.modified === true ? "Resized" : (photo.modified || "")
     }));
 });
 
 if (entries.length !== 22) throw new Error(`Expected 22 chapters, received ${entries.length}.`);
+
+const chaptersWithoutPhotos = entries.filter((entry) => !entry.photos.length);
+if (chaptersWithoutPhotos.length) {
+  throw new Error(
+    `Every chapter needs at least one photo. Missing: ${chaptersWithoutPhotos.map((entry) => entry.slug).join(", ")}`
+  );
+}
 
 const slugs = new Set(entries.map((entry) => entry.slug));
 if (slugs.size !== entries.length) throw new Error("Diary chapter slugs must be unique.");
@@ -121,16 +134,74 @@ function renderBlock(block) {
   return `<p>${escapeHtml(block.text)}</p>`;
 }
 
-function renderPhoto(photo) {
+function renderPhoto(photo, options = {}) {
   if (!photo) return "";
+  const { inGallery = false, index = 0, total = 1 } = options;
   const dimensions = Number(photo.width) > 0 && Number(photo.height) > 0
     ? ` width="${Number(photo.width)}" height="${Number(photo.height)}"`
     : "";
+  const loading = index === 0
+    ? 'loading="eager" fetchpriority="high"'
+    : 'loading="lazy" fetchpriority="auto"';
+  const group = inGallery
+    ? ` role="group" aria-label="Photo ${index + 1} of ${total}"`
+    : "";
+  const creditUrl = /^https?:\/\//i.test(photo.creditUrl) ? photo.creditUrl : "";
+  const sourceUrl = /^https?:\/\//i.test(photo.sourceUrl) ? photo.sourceUrl : "";
+  const licenseUrl = /^https?:\/\//i.test(photo.licenseUrl) ? photo.licenseUrl : "";
+  const credit = cleanWhitespace(photo.credit);
+  const license = cleanWhitespace(photo.license);
+  const modified = cleanWhitespace(photo.modified);
+  const creditLabel = creditUrl
+    ? `<a href="${escapeHtml(creditUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(credit || "Creator")}</a>`
+    : (!sourceUrl ? escapeHtml(credit) : "");
+  const sourceLabel = sourceUrl
+    ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(creditUrl ? "Source" : (credit || "Source"))}</a>`
+    : "";
+  const licenseLabel = licenseUrl
+    ? `<a href="${escapeHtml(licenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(license || "License")}</a>`
+    : escapeHtml(license);
+  const attribution = [creditLabel, sourceLabel, licenseLabel, escapeHtml(modified)].filter(Boolean).join(" · ");
+  const caption = `
+          <span class="photo-caption">${escapeHtml(photo.caption)}</span>
+          ${attribution ? `<span class="photo-credit">${attribution}</span>` : ""}`;
   return `
-      <figure class="chapter-photo ${escapeHtml(photo.orientation)}">
-        <img src="../${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}"${dimensions} loading="eager" fetchpriority="high" decoding="async">
-        <figcaption>${escapeHtml(photo.caption)}</figcaption>
+      <figure class="chapter-photo${inGallery ? " gallery-slide" : ""} ${escapeHtml(photo.orientation)}"${group}>
+        <img src="../${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}"${dimensions} ${loading} decoding="async">
+        <figcaption>${caption}
+        </figcaption>
       </figure>`;
+}
+
+function renderGallery(photos, chapterNumber) {
+  if (!Array.isArray(photos) || !photos.length) return "";
+  if (photos.length === 1) return renderPhoto(photos[0]);
+
+  const galleryId = `chapter-${chapterNumber}-gallery`;
+  const slides = photos.map((photo, index) => renderPhoto(photo, {
+    inGallery: true,
+    index,
+    total: photos.length
+  })).join("");
+
+  return `
+      <section class="chapter-gallery" data-gallery aria-label="Chapter photos">
+        <div class="gallery-viewport" data-gallery-viewport tabindex="0" aria-describedby="${galleryId}-status">
+          <div class="gallery-track">${slides}
+          </div>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous photo">
+            <span aria-hidden="true">←</span>
+          </button>
+          <p class="gallery-status" id="${galleryId}-status" aria-live="polite" aria-atomic="true">
+            <span data-gallery-current>1</span> / ${photos.length}
+          </p>
+          <button class="gallery-button" type="button" data-gallery-next aria-label="Next photo">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>`;
 }
 
 function navigationLink(entry, direction) {
@@ -174,7 +245,7 @@ function chapterPage(entry, index) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../styles.css?v=3">
+  <link rel="stylesheet" href="../styles.css?v=4">
 </head>
 <body class="session-page">
   <a class="skip-link" href="#chapter-content">Skip to the chapter</a>
@@ -193,7 +264,7 @@ function chapterPage(entry, index) {
         <h1>${escapeHtml(entry.title)}</h1>
         <p class="chapter-date">${escapeHtml(dateLine)}</p>
       </header>
-      ${renderPhoto(photo)}
+      ${renderGallery(entry.photos, number)}
       <div class="chapter-body">
         ${(entry.blocks || []).map(renderBlock).join("\n        ")}
       </div>
@@ -203,6 +274,7 @@ function chapterPage(entry, index) {
       </nav>
     </article>
   </main>
+  <script src="../gallery.js?v=1" defer></script>
 </body>
 </html>
 `;

@@ -45,7 +45,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 1,
     "excerpt": "Only a few hours remain before our flight departs from Toronto. Earlier today, someone shared pictures on WhatsApp from the airport, moments before boarding their flight to Qadian. As I looked at their faces filled with…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/pearson-terminal-1.webp",
+        "alt": "Wide exterior view of the curved glass facade of Toronto Pearson Airport Terminal 1.",
+        "caption": "Reference image: Toronto Pearson Airport, where the journey was due to begin.",
+        "orientation": "landscape",
+        "width": 1500,
+        "height": 471,
+        "credit": "Qyd",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Pearson_Airport-Terminal_1.JPG",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "the-flying-out",
@@ -105,7 +120,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 2,
     "excerpt": "Our journey began with a two-hour drive across the border from Buffalo, NY, to Toronto to board our Air France flight to India. The excitement was tangible, and as part of the Qadian Team of Waqf-e-Nau’s instructions,…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/air-canada-787.webp",
+        "alt": "Air Canada Boeing 787 approaching Toronto Pearson with its landing gear down.",
+        "caption": "An Air Canada Boeing 787, illustrating the airline that ultimately carried the group to Delhi.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 903,
+        "credit": "Snowjam",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Air_Canada_Boeing_787_C-GHPT.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "arrival-in-delhi",
@@ -153,7 +183,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 3,
     "excerpt": "We are finally in Delhi! Following the recommendations from the Waqf-e-Nau admin team, we made sure all group members were armed with masks as we navigated our way through the airport. Despite the anticipated concerns…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/delhi-airport-exterior.webp",
+        "alt": "Glass roof and large metallic hand sculptures above the check-in hall at Indira Gandhi International Airport.",
+        "caption": "Reference image: the terminal hall at Indira Gandhi International Airport in Delhi.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 650,
+        "credit": "Harvinder Chandigarh",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indira_Gandhi_International_Airport,_New_Delhi.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Cropped, resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "early-arrival-in-delhi",
@@ -208,7 +253,13 @@ window.QADIAN_DIARY_ENTRIES = [
         "caption": "Masjid Baitul Hadi, Delhi.",
         "orientation": "landscape",
         "width": 1800,
-        "height": 1200
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
       }
     ]
   },
@@ -274,7 +325,13 @@ window.QADIAN_DIARY_ENTRIES = [
         "caption": "Humayun’s Tomb, seen through its gateway.",
         "orientation": "landscape",
         "width": 1800,
-        "height": 1200
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
       }
     ]
   },
@@ -383,12 +440,32 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Today was a long but exciting day, filled with changes, adjustments, and unexpected detours. Let’s start with the places we were supposed to visit but couldn’t: Tughlakabad Fort and Chandni Chowk. The Tughlakabad system…",
     "photos": [
       {
+        "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/qutub-minar.webp",
+        "alt": "Qutub Minar rising above trees beneath a clear Delhi sky.",
+        "caption": "Qutub Minar, the day’s first stop.",
+        "orientation": "portrait",
+        "width": 1200,
+        "height": 1800,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      },
+      {
         "src": "assets/photos/a-day-of-plans-changes-and-timeless-wonders/red-fort.webp",
         "alt": "Indian national flag flying above the Red Fort’s domed pavilions and red sandstone ramparts, with birds in a blue sky.",
         "caption": "The Red Fort, where the group ended the day.",
         "orientation": "landscape",
         "width": 1800,
-        "height": 1200
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
       }
     ]
   },
@@ -547,7 +624,27 @@ window.QADIAN_DIARY_ENTRIES = [
         "caption": "The Great Gate of the Taj Mahal complex.",
         "orientation": "landscape",
         "width": 1800,
-        "height": 1200
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      },
+      {
+        "src": "assets/photos/a-day-at-the-taj-mahal/taj-marble-detail.webp",
+        "alt": "Close view of the Taj Mahal’s marble inlay, Arabic calligraphy and central dome.",
+        "caption": "Marble, calligraphy and the main dome of the Taj Mahal.",
+        "orientation": "landscape",
+        "width": 1800,
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
       }
     ]
   },
@@ -694,7 +791,13 @@ window.QADIAN_DIARY_ENTRIES = [
         "caption": "Ludhiana, 73 kilometres ahead.",
         "orientation": "landscape",
         "width": 1800,
-        "height": 1200
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
       }
     ]
   },
@@ -782,7 +885,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part II",
     "chapterNumber": 9,
     "excerpt": "After completing our visit to Ludhiana, we gathered for Zuhr and Asr prayers in congregation and then shared a moment of combined silent supplication, reflecting on the significance of where we had been and the…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/the-road-to-hoshiarpur-and-onward-to-qadian/hoshiarpur-road-sign.webp",
+        "alt": "Nighttime view through a coach window of a green road sign showing Hoshiarpur five kilometres ahead.",
+        "caption": "Hoshiarpur, five kilometres ahead.",
+        "orientation": "landscape",
+        "width": 1800,
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      }
+    ]
   },
   {
     "slug": "arrival-in-qadian",
@@ -904,7 +1022,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part III",
     "chapterNumber": 10,
     "excerpt": "As I look around, many are struggling to keep their eyes open, worn out from the day’s long journey. Yet, the admins remain upright, engaged in quiet discussions, planning the next steps with precision and care. Their…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/qadian-rooftop.webp",
+        "alt": "Qadian rooftop skyline centered on Minarat-ul-Masih and the mosque.",
+        "caption": "Reference image: Qadian’s rooftops with Minarat-ul-Masih rising above the town.",
+        "orientation": "landscape",
+        "width": 715,
+        "height": 405,
+        "credit": "Nawabmalhi",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qadian_rooftop_and_Minaratul_Masih.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "arrival-in-qadian-and-visit-to-bahishti-maqbara",
@@ -1002,7 +1135,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part IV",
     "chapterNumber": 11,
     "excerpt": "When we finally arrived at Sara-i-Waseem Guest House, the warmth of the welcome was unforgettable. Recent graduates and students of Jamia Ahmadiyya Qadian lined up outside, greeting us with chants of “Welcome” in Urdu…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/okhla-muslim-cemetery.webp",
+        "alt": "White stone graves beneath a tree in the Okhla Muslim Cemetery in New Delhi.",
+        "caption": "Illustrative view of a Muslim cemetery in India; this is not Bahishti Maqbara.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 1200,
+        "credit": "Pinakpani",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okhla_Muslim_Cemetery_07.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "exploring-qadian-fajr-and-darul-masih",
@@ -1133,7 +1281,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part I",
     "chapterNumber": 12,
     "excerpt": "We only managed to sleep a few hours before it was time to wake up for Fajr prayers. The morning air in Qadian was cooler than expected, but for those of us used to Buffalo winters, it felt refreshingly mild. None of us…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/masjid-aqsa-large.webp",
+        "alt": "White Masjid Aqsa building in Qadian behind a red boundary wall.",
+        "caption": "Reference image: Masjid Aqsa in Qadian, one of the sacred sites visited after Fajr.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 1067,
+        "credit": "Mastermaak",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Aqsa_Large.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "a-day-immersed-in-prayer-and-reflection",
@@ -1223,7 +1386,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part II",
     "chapterNumber": 13,
     "excerpt": "After the tour of Darul Masih, we stayed in the area for Zuhr prayers. At the end of the tour, Sadr Khuddam-ul-Ahmadiyya USA, Imam Abdullah Dibba Sahib, once again reminded us of the significance of where we were. He…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/quran-stands.webp",
+        "alt": "A row of Qur’ans resting open and closed on wooden stands over a prayer carpet.",
+        "caption": "Illustrative image of Qur’ans arranged for prayer and reflection inside a mosque.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 583,
+        "credit": "الدبوني",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Quran_stands.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "a-voice-from-the-minaret",
@@ -1342,7 +1520,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part I",
     "chapterNumber": 14,
     "excerpt": "It’s 4 a.m. in Qadian. The cool predawn air feels calm and peaceful. The streets are quiet, and even the morning birds have yet to awaken. At Sara-i-Waseem, the occasional creak of doors opening and closing signals that…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/white-minaret-qadian.webp",
+        "alt": "Tall stone White Minaret of Qadian photographed from ground level.",
+        "caption": "Reference image: Minarat-ul-Masih, the White Minaret of Qadian.",
+        "orientation": "portrait",
+        "width": 592,
+        "height": 1600,
+        "credit": "Ceddyfresse",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wei%C3%9Fes_Minarett,_Qadian_(Minarat_ul-Massih).jpg",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "exploring-the-spiritual-landmarks-of-qadian",
@@ -1435,7 +1628,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part II",
     "chapterNumber": 15,
     "excerpt": "After early morning prayers and a quick breakfast, we gathered for another day of exploring the historic and spiritual landmarks of Qadian. Right on time at 9:30 a.m., our guide, Naseer Haq Acharia Murabbi of Ammore…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/exploring-the-spiritual-landmarks-of-qadian/fazl-e-umar-printing-press.webp",
+        "alt": "The English and Urdu sign above the entrance to Fazl-e-Umar Printing Press Qadian.",
+        "caption": "Fazl-e-Umar Printing Press in Qadian.",
+        "orientation": "landscape",
+        "width": 1800,
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      }
+    ]
   },
   {
     "slug": "a-day-of-service-and-reflection",
@@ -1553,7 +1761,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part III",
     "chapterNumber": 16,
     "excerpt": "The time between Zuhr and Maghrib in Qadian feels brief, often spent in personal prayers, reflection, or exploring the town beyond the Ahmadiyya Muhalla. Today and tomorrow, many of the Adhan calls are being performed…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/noor-hospital-qadian.webp",
+        "alt": "Red and patterned facade of Noor Hospital Qadian with its name above the entrance.",
+        "caption": "Reference image: Noor Hospital in Qadian, one of the town’s institutions of service.",
+        "orientation": "landscape",
+        "width": 640,
+        "height": 480,
+        "credit": "Mastermaak",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Noor_Hospital_Qadian.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "a-friday-to-remember",
@@ -1675,7 +1898,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "Part I",
     "chapterNumber": 17,
     "excerpt": "It’s 4 a.m. on this cool Friday morning in Qadian. These beautiful verses by the Promised Messiah (as) echoed in my mind as I prepared for what promised to be a deeply spiritual and emotional day.",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/masjid-aqsa-courtyard.webp",
+        "alt": "Masjid Aqsa’s white prayer hall and minaret above the rooftops of Qadian.",
+        "caption": "Reference image: Masjid Aqsa and the White Minaret in Qadian.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 900,
+        "credit": "Mastermaak",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Aqsa_Qadian.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "a-farewell-full-of-gratitude",
@@ -1806,7 +2044,13 @@ window.QADIAN_DIARY_ENTRIES = [
         "caption": "Minarat-ul-Masih on the final evening in Qadian.",
         "orientation": "landscape",
         "width": 1800,
-        "height": 1200
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
       }
     ]
   },
@@ -1938,7 +2182,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 19,
     "excerpt": "Sad. Tired. And reluctant to get up. It wasn’t because of fatigue; it was because we did not want to leave. But as the saying goes, every good thing must come to an end.",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/punjab-highway.webp",
+        "alt": "A divided road in Punjab with cars, a motorbike, roadside trees and signs for Chintpurni, Una and Nangal.",
+        "caption": "A road in Punjab with directions toward Chintpurni, Una and Nangal—an illustrative view of the journey home.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 1200,
+        "credit": "Hari Singh",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Roads_in_Punjab_India.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "the-buffalo-miracle",
@@ -2023,7 +2282,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 20,
     "excerpt": "It is often emphasized by our elders in the Jamaat that we should maintain a strong connection with Huzur, regularly writing to him and seeking his prayers. Building a personal relationship with the Khalifa is not only…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/delhi-airport-terminal.webp",
+        "alt": "Three illuminated flight-information screens inside Delhi airport.",
+        "caption": "Reference image: flight information displays inside Delhi airport, where delays tested the group’s plans.",
+        "orientation": "landscape",
+        "width": 1280,
+        "height": 960,
+        "credit": "Patodikhushi07",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Airport_Delhi.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "a-sad-news-the-last-dervish-of-qadian",
@@ -2108,7 +2382,22 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 21,
     "excerpt": "Today, a solemn news reached us: Respected Tayyib Ali Sahib, the last Dervish of Qadian, has passed away by the decree of Allah.",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/reference/qadian-minaret-flag.webp",
+        "alt": "Liwa-e-Ahmadiyya flag flying beside the White Minaret and Masjid Aqsa in Qadian.",
+        "caption": "Minarat-ul-Masih and Liwa-e-Ahmadiyya in Qadian—an image of the legacy safeguarded by the Dervishes.",
+        "orientation": "landscape",
+        "width": 1600,
+        "height": 864,
+        "credit": "Ceddyfresse",
+        "creditUrl": "",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liwa-e-Ahmadiyya_and_Minarat-ul-Massih.jpg",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+        "modified": "Resized and converted to WebP"
+      }
+    ]
   },
   {
     "slug": "a-final-message",
@@ -2152,6 +2441,49 @@ window.QADIAN_DIARY_ENTRIES = [
     "part": "",
     "chapterNumber": 22,
     "excerpt": "When I started writing, my goal was simple: to take all of you along on this journey, even if you couldn’t physically be with us. It’s been a privilege to share these experiences, and I hope they brought Qadian and its…",
-    "photos": []
+    "photos": [
+      {
+        "src": "assets/photos/exploring-delhi-and-reflecting-on-allahs-plan/humayuns-tomb-gateway.webp",
+        "alt": "Humayun’s Tomb framed by a dark pointed arch, recalling the Delhi portion of the journey.",
+        "caption": "A final look back: Humayun’s Tomb in Delhi.",
+        "orientation": "landscape",
+        "width": 1800,
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      },
+      {
+        "src": "assets/photos/a-day-at-the-taj-mahal/taj-marble-detail.webp",
+        "alt": "Close view of the Taj Mahal’s marble inlay, Arabic calligraphy and central dome.",
+        "caption": "A final look back: marble and calligraphy at the Taj Mahal.",
+        "orientation": "landscape",
+        "width": 1800,
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      },
+      {
+        "src": "assets/photos/a-farewell-full-of-gratitude/minarat-ul-masih-at-night.webp",
+        "alt": "The illuminated Minarat-ul-Masih rises above dark building silhouettes at night.",
+        "caption": "A final look back: Minarat-ul-Masih on the last evening in Qadian.",
+        "orientation": "landscape",
+        "width": 1800,
+        "height": 1200,
+        "credit": "",
+        "creditUrl": "",
+        "sourceUrl": "",
+        "license": "",
+        "licenseUrl": "",
+        "modified": ""
+      }
+    ]
   }
 ];
