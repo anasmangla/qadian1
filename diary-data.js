@@ -47,18 +47,18 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "Only a few hours remain before our flight departs from Toronto. Earlier today, someone shared pictures on WhatsApp from the airport, moments before boarding their flight to Qadian. As I looked at their faces filled with…",
     "photos": [
       {
-        "src": "assets/photos/reference/pearson-terminal-1.webp",
-        "alt": "Wide exterior view of the curved glass facade of Toronto Pearson Airport Terminal 1.",
-        "caption": "Reference image: Toronto Pearson Airport, where the journey was due to begin.",
+        "src": "assets/photos/reference/pearson-terminal-sunset.webp",
+        "alt": "An empty glass-lined concourse inside Toronto Pearson Airport glowing with warm evening sunlight.",
+        "caption": "Reference image: evening light inside Toronto Pearson Airport, echoing the anticipation before departure.",
         "orientation": "landscape",
-        "width": 1500,
-        "height": 471,
-        "credit": "Qyd",
+        "width": 1600,
+        "height": 1067,
+        "credit": "sagesolar",
         "creditUrl": "",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Pearson_Airport-Terminal_1.JPG",
-        "license": "CC BY 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
-        "modified": "Resized and converted to WebP",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_dreamer_reins_their_appetite_-_Flickr_-_sagesolar.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "modified": "Cropped, resized and converted to WebP",
         "adaptationLicense": ""
       }
     ]
@@ -187,15 +187,15 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "We are finally in Delhi! Following the recommendations from the Waqf-e-Nau admin team, we made sure all group members were armed with masks as we navigated our way through the airport. Despite the anticipated concerns…",
     "photos": [
       {
-        "src": "assets/photos/reference/delhi-airport-exterior.webp",
-        "alt": "Glass roof and large metallic hand sculptures above the check-in hall at Indira Gandhi International Airport.",
-        "caption": "Reference image: the terminal hall at Indira Gandhi International Airport in Delhi.",
+        "src": "assets/photos/reference/delhi-historic-skyline.webp",
+        "alt": "A dark Delhi skyline with domes, arches and minaret-like towers silhouetted against a deep blue evening sky.",
+        "caption": "Reference image: Delhi’s historic skyline after dark, echoing the group’s nighttime arrival and first reflections on the city.",
         "orientation": "landscape",
         "width": 1600,
-        "height": 650,
-        "credit": "Harvinder Chandigarh",
+        "height": 1067,
+        "credit": "Fredericknoronha",
         "creditUrl": "",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indira_Gandhi_International_Airport,_New_Delhi.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Delhi_skyline._01.jpg",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "modified": "Cropped, resized and converted to WebP",
@@ -2305,19 +2305,19 @@ window.QADIAN_DIARY_ENTRIES = [
     "excerpt": "It is often emphasized by our elders in the Jamaat that we should maintain a strong connection with Huzur, regularly writing to him and seeking his prayers. Building a personal relationship with the Khalifa is not only…",
     "photos": [
       {
-        "src": "assets/photos/reference/delhi-airport-terminal.webp",
-        "alt": "Three illuminated flight-information screens inside Delhi airport.",
-        "caption": "Reference image: flight information displays inside Delhi airport, where delays tested the group’s plans.",
+        "src": "assets/photos/reference/air-india-delhi-departure.webp",
+        "alt": "An Air India aircraft lifting from a runway at Indira Gandhi International Airport in Delhi.",
+        "caption": "Reference image: an Air India flight departing Delhi, reflecting the unexpected rebooking that carried the group home.",
         "orientation": "landscape",
-        "width": 1280,
-        "height": 960,
-        "credit": "Patodikhushi07",
+        "width": 1600,
+        "height": 1067,
+        "credit": "Biswarup Ganguly",
         "creditUrl": "",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Airport_Delhi.jpg",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "modified": "Resized and converted to WebP",
-        "adaptationLicense": "same"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Air_India_Flight_Takes_Off_-_Runway_11-29_-_Indira_Gandhi_International_Airport_-_New_Delhi_2016-08-08_9243.JPG",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "modified": "Cropped, resized and converted to WebP",
+        "adaptationLicense": ""
       }
     ]
   },
