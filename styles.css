@@ -185,7 +185,7 @@ a:hover {
 
 .cover-photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center;
 }
@@ -491,13 +491,6 @@ a:hover {
   line-height: 1.35;
 }
 
-@media (max-width: 991.98px) {
-  .cover-photo img {
-    aspect-ratio: 16 / 10;
-    object-position: center 42%;
-  }
-}
-
 @media (max-width: 800px) {
   .header-inner {
     min-height: 62px;
@@ -535,10 +528,6 @@ a:hover {
 
   .cover h1 {
     font-size: clamp(2.75rem, 15vw, 4.2rem);
-  }
-
-  .cover-photo img {
-    aspect-ratio: 4 / 3;
   }
 
   .chapter-index {
